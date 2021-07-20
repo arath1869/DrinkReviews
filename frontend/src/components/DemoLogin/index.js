@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import './LoginForm.css'
+import './DemoLogin.css'
 
-const LoginFormPage = () => {
+const DemoLogin = () => {
     const dispatch = useDispatch();
     // const sessionUser = useSelector(state => state.session.user);
-    const [credential, setCredential] = useState('');
-    const [password, setPassword] = useState('');
+    const [credential, setCredential] = useState('Demo');
+    const [password, setPassword] = useState('password');
     const [errors, setErrors] = useState([]);
 
 
@@ -23,31 +23,29 @@ const LoginFormPage = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='demo-form'>
             <ul>
                 {errors.map((error, idx) => <li key={idx}>{error}</li>)}
             </ul>
             <label>
-                Username or Email
         <input
-                    type="text"
+                    type="hidden"
                     value={credential}
                     onChange={(e) => setCredential(e.target.value)}
                     required
                 />
             </label>
             <label>
-                Password
         <input
-                    type="password"
+                    type="hidden"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
             </label>
-            <button type="submit">Log In</button>
+            <button className="demo-button" type="submit">Demo</button>
         </form>
     );
 }
 
-export default LoginFormPage;
+export default DemoLogin;
