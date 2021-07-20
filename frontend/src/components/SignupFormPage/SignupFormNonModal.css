@@ -1,0 +1,80 @@
+.nonModalSignup{
+    border: 10px solid black;
+    background-color: #FFD8CC;
+    position: absolute;
+    border-radius: 1em;
+    left:25%;
+    right:25%;
+    top:10%;
+    bottom:auto;
+    box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.outterDiv{
+    background-color:#b0d2cf;
+    height: 100vh;
+}
+
+.signupHome_button{
+    position: absolute;
+    left: 80%;
+    right: 20%;
+    top: 2%;
+    bottom: 98%;
+    background-color:#FFD8CC;
+    display:inline-block;
+    border:.2em solid black;
+    font-size: 1em;
+    color:black;
+    border-radius:.5em;
+    box-sizing: border-box;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    text-align:center;
+    transition: all 0.2s;
+    width: 80px;
+    height: 50px;
+    cursor: pointer;
+    outline-offset: 4px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.signupHome_button:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+    transform: translateY(-6px);
+}
+
+.signinPage-button{
+    background-color: #B80f0a;
+    margin-bottom: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1em;
+    color:white;
+    border-radius:.5em;
+    display: block;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    text-align:center;
+    transition: all 0.2s;
+    width: 30%;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.signinPage-button:hover{
+    transform: translateY(-6px);
+    color:white;
+}
+
+.signup-login-link{
+    color: red;
+    font-weight: 500;
+}
+
+.form-login-redirect{
+ margin-top: 0;
+ margin-bottom: 5%;
+ text-align: center;
+}
