@@ -6,13 +6,29 @@ body {
 
 .home-background {
     min-height: 100%;
-    min-width: 1024px;
+    /* min-width: 1024px; */
     width: 100%;
     height: auto;
 }
 
-.logdemo{
-    position: absolute;
-    min-width: 1024px;
-    
+.searchBar{
+    position: sticky;
 }
+
+.input-search-field{
+    display: inline-block;
+    position: absolute;
+    font-family:'Roboto',sans-serif;
+    margin-top: 20%;
+    margin-bottom: 80%;
+    margin-left: 30%;
+    margin-right: 70%;
+    height: 3vh;
+    width: 40%;
+}
+
+/* .outterWrapper{
+    position: sticky;
+} */
+
+
