@@ -1,0 +1,105 @@
+.mostRecentPhoto-1 img{
+    max-width:100%;
+    max-height: 200px;
+    position: sticky;
+    height: 30vh;
+    width: auto;
+    margin: 0 10%;
+    
+}
+
+.mostRecentPhoto-2 img{
+    max-width:100%;
+    max-height: 200px;
+    position: sticky;
+    height: 30vh;
+    width: auto;
+    margin: 0 10%;
+
+}
+
+.mostRecentPhoto-3 img{
+    max-width:100%;
+    max-height: 200px;
+    position: sticky;
+    height: 30vh;
+    width: auto;
+    margin: 0 10%;
+}
+
+.mostRecentPhoto-4 img{
+    max-width:100%;
+    max-height: 200px;
+    position: sticky;
+    height: 30vh;
+    width: auto;
+    margin: 0 10%;
+}
+
+.mostRecentPhoto-1 > img{
+    object-fit: cover;
+}
+
+.mostRecentPhoto-2 > img{
+    object-fit: cover;
+}
+
+.mostRecentPhoto-3 > img{
+    object-fit: cover;
+}
+
+.mostRecentPhoto-4 > img{
+    object-fit: cover;
+}
+
+.mostRecentPhoto-1{
+    grid-area: space1;
+    box-shadow: -2px 5px 2px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.mostRecentPhoto-2{
+    grid-area: space2;
+    box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.mostRecentPhoto-3{
+    grid-area: space3;
+    box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.mostRecentPhoto-4{
+    grid-area: space4;
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.mostRecentImages {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas:
+    "space1 space2 space3 space4";
+}
+
+.title_mostRecent{
+    text-align: center;
+    font-family:'Roboto',sans-serif;
+    font-size: 4vh;
+    color: white;
+    text-shadow: 2px 2px 1px rgba(220, 20, 60, 0.5);
+    background-color: #b0d2cf;
+    margin-top: -1%;
+    margin-bottom: 1%;
+    height: 100px;
+    line-height: 100px;
+}

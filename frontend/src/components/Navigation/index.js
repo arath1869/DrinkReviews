@@ -6,7 +6,6 @@ import LoginFormModal from '../LoginFormModal';
 import DemoLogin from '../DemoLogin/index'
 import SignupFormModal from '../SignupFormPage/index'
 import './Navigation.css';
-import SignupFormPage from '../SignupFormPage/SignupForm';
 
 function Navigation({ isLoaded }) {
     const sessionUser = useSelector(state => state.session.user);
@@ -20,7 +19,7 @@ function Navigation({ isLoaded }) {
     } 
     
     else if(location.pathname === '/signup') {
-       console.log('working')
+       return null
     } else {
         sessionLinks = (
             <>

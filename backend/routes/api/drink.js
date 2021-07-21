@@ -18,7 +18,12 @@ router.post(
         const id = await DrinksRepository.create({title,imageURL,userId});
         return res.json(id)
     })
-
 )
+
+
+router.delete("/:id", asyncHandler(async function(req,res){
+    const drinkId = await DrinksRepository.deleteDrink(req.params.id);
+    return res.json({ drinkId })
+}))
 
 module.exports = router;

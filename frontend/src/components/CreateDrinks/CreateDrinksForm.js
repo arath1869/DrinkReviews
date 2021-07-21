@@ -23,7 +23,7 @@ const CreateDrinksForm = () => {
         let createdDrink = await dispatch(createDrink(payload))
         if (createdDrink) {
             // history.push(`/drink/${createdDrink.id}`);
-            history.push(`/`)
+            history.push(`/signup`)
         }
     };
 

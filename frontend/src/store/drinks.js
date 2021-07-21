@@ -1,6 +1,7 @@
 import { csrfFetch } from './csrf';
 const LOAD = 'drinks/LOAD';
-const ADD_ONE='drinks/ADD_ONE'
+const ADD_ONE='drinks/ADD_ONE';
+const DELETE_ONE='/drinks/DELETE_ONE'
 
 const load = list => ({
     type: LOAD,
@@ -11,6 +12,11 @@ const addOneDrink = drink => ({
     type: ADD_ONE,
     drink,
 });
+
+const deleteOne = (drinkId) => ({
+    type: DELETE_ONE,
+    drinkId,
+})
 
 export const createDrink = (data) => async dispatch => {
     const response = await csrfFetch(`/api/drinks`,
@@ -76,6 +82,11 @@ const drinksReducer = (state=initialState, action) => {
                     ...action.drink,
                 }
             }
+        }
+        case DELETE_ONE: {
+            const newState={...state};
+            delete newState[action.itemId];
+            return newState;
         }
         default:
             return state;
