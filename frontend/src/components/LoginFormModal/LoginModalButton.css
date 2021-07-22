@@ -2,21 +2,21 @@
     background-color: transparent;
     display:inline-block;
     border:.2em solid #FFFFFF;
-    font-size: 1em;
+    font-size: 1.2vw;
     color:#FFFFFF;
     position: absolute;
     border-radius:.5em;
     box-sizing: border-box;
     font-family:'Roboto',sans-serif;
-    margin-top:50%;
+    margin-top: 4.5vh;
     margin-bottom: auto;
-    margin-left: -80%;
+    margin-left: -6vw;
     margin-right: auto;
     font-weight:300;
     text-align:center;
     transition: all 0.2s;
-    width: 80px;
-    height: 50px;
+    width:6vw;
+    height: 5vh;
     cursor: pointer;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -30,136 +30,3 @@
 .login-button:active{
      transform: translateY(2px);
 }
-
-
-/* @media screen and (max-width: 1520px){
-.login-button{
-    background-color: black;
-    display:inline-block;
-    border:.2em solid #FFFFFF;
-    font-size: 1em;
-    color:#FFFFFF;
-    position: absolute;
-    border-radius:.5em;
-    box-sizing: border-box;
-    font-family:'Roboto',sans-serif;
-    margin: 40px 10px;
-    font-weight:300;
-    text-align:center;
-    transition: all 0.2s;
-    left:-60%;
-    width: 80px;
-    height: 50px;
-    cursor: pointer;
-}
-}
-
-@media screen and (max-width: 1050px){
-.login-button{
-    background-color: transparent;
-    display:inline-block;
-    border:.2em solid #FFFFFF;
-    font-size: 1em;
-    color:#FFFFFF;
-    position: absolute;
-    border-radius:.5em;
-    box-sizing: border-box;
-    font-family:'Roboto',sans-serif;
-    margin: 40px 10px;
-    font-weight:300;
-    text-align:center;
-    transition: all 0.2s;
-    left:74%;
-    width: 80px;
-    height: 50px;
-    cursor: pointer;
-}
-}
-
-@media screen and (max-width: 970px){
-.login-button{
-    background-color: transparent;
-    display:inline-block;
-    border:.2em solid #FFFFFF;
-    font-size: 1em;
-    color:#FFFFFF;
-    position: fixed;
-    border-radius:.5em;
-    box-sizing: border-box;
-    font-family:'Roboto',sans-serif;
-    margin: 40px -5px;
-    font-weight:300;
-    text-align:center;
-    transition: all 0.2s;
-    left:74%;
-   width: 72px;
-    height: 42px;
-    cursor: pointer;
-}
-}
-
-@media screen and (max-width: 800px){
-.login-button{
-    background-color: transparent;
-    display:inline-block;
-    border:.2em solid #FFFFFF;
-    font-size: 1em;
-    color:#FFFFFF;
-    position: fixed;
-    border-radius:.5em;
-    box-sizing: border-box;
-    font-family:'Roboto',sans-serif;
-    margin: 40px -7px;
-    font-weight:300;
-    text-align:center;
-    transition: all 0.2s;
-    left:74%;
-   width: 72px;
-    height: 42px;
-    cursor: pointer;
-}
-}
-
-@media screen and (max-width: 650px){
-.login-button{
-    background-color: transparent;
-    display:inline-block;
-    border:.2em solid #FFFFFF;
-    font-size: 1em;
-    color:#FFFFFF;
-    position: fixed;
-    border-radius:.5em;
-    box-sizing: border-box;
-    font-family:'Roboto',sans-serif;
-    margin: 40px -7px;
-    font-weight:300;
-    text-align:center;
-    transition: all 0.2s;
-    left:74%;
-   width: 65px;
-    height: 38px;
-    cursor: pointer;
-}
-}
-
-@media screen and (max-width: 600px){
-.login-button{
-    background-color: transparent;
-    display:inline-block;
-    border:.2em solid #FFFFFF;
-    font-size: 1em;
-    color:#FFFFFF;
-    position: fixed;
-    border-radius:.5em;
-    box-sizing: border-box;
-    font-family:'Roboto',sans-serif;
-    margin: 40px -13px;
-    font-weight:300;
-    text-align:center;
-    transition: all 0.2s;
-    left:74%;
-   width: 65px;
-    height: 38px;
-    cursor: pointer;
-}
-} */

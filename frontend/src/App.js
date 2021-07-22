@@ -6,6 +6,7 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import Home from './components/Home/index'
 import DrinkPage from './components/DrinkPage'
+import AllDrinks from './components/allDrinks'
 
 function App() {
 
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route exact path="/signup">
             <SignupFormNonModal  />
+          </Route>
+          <Route exact path="/drinks">
+            <AllDrinks />
           </Route>
           <Route exact path="/drinks/:drinkId">
             <DrinkPage />

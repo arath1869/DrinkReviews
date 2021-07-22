@@ -24,7 +24,6 @@ const CreateDrinksForm = () => {
         console.log(createdDrink)
         if (createdDrink) {
             history.push(`/drinks/${createdDrink}`);
-            // history.push(`/signup`)
         }
     };
 

@@ -5,6 +5,7 @@ const { handleValidationErrors } = require('../../utils/validation');
 
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
 const { User } = require('../../db/models');
+const UsersRepository = require('../../db/users-repository')
 
 const router = express.Router();
 
@@ -27,6 +28,11 @@ const validateSignup = [
         .withMessage('Password must be 6 characters or more.'),
     handleValidationErrors,
 ];
+
+router.get('/', asyncHandler(async function(_req, res){
+    const user = await UsersRepository.list();
+    return res.json(user)
+}))
 
 // Sign up
 router.post(

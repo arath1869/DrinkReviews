@@ -20,7 +20,9 @@ function Navigation({ isLoaded }) {
     
     else if(location.pathname === '/signup') {
        return null
-    } else {
+    } 
+
+    else {
         sessionLinks = (
             <>
                 <DemoLogin />
@@ -31,10 +33,19 @@ function Navigation({ isLoaded }) {
     }
 
     return (
+        <div>
         <ul className="nav_ul">
-                {/* <NavLink exact to="/">Home</NavLink> */}
                 {isLoaded && sessionLinks}
         </ul>
+        <div className='navDiv'>
+                <NavLink exact to="/">
+                    <button className="home-navLink">Home</button>
+                </NavLink>
+                <NavLink exact to="/drinks">
+                    <button className="drinks-navLink">Drinks</button>
+                </NavLink>
+        </div>
+        </div>
     );
 }
 

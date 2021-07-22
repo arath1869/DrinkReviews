@@ -5,4 +5,125 @@
     position: absolute;
     margin-left: 80%;
     margin-right: 20%;
+    margin-top: 1%;
+    margin-bottom: 99%;
+}
+
+.home-navLink{
+   position: absolute;
+   margin-top: -2vh;
+   margin-bottom: auto;
+   margin-left: -3vw;
+   margin-right: auto;
+   background-color: transparent;
+   display: inline-block;
+   border-top: none;
+   border-bottom: .2em solid #FFFFFF;
+   border-left: none ;
+   border-right: none;
+    font-size: 1.2vw;
+    color:#FFFFFF;
+    border-radius:0;
+    box-sizing: border-box;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    text-align:center;
+    transition: all 0.2s;
+    width:6vw;
+    height: 5vh;
+    cursor: pointer;
+    /* outline-offset: 4px; */
+    /* box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2); */
+}
+
+.home-navLink:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+    transform: translateY(-6px);
+}
+
+.home-navLink:active{
+     transform: translateY(2px);
+}
+
+.navDiv{
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    margin-top: 4%;
+    margin-bottom: 96%;
+    margin-left: 10%;
+    margin-right: 90%;
+}
+
+.drinks-navLink{
+    position: absolute;
+   margin-top: -2vh;
+   margin-bottom: auto;
+   margin-left: 5vw;
+   margin-right: auto;
+   background-color: transparent;
+   display: inline-block;
+   border-top: none;
+   border-bottom: .2em solid #FFFFFF;
+   border-left: none ;
+   border-right: none;
+    font-size: 1.2vw;
+    color:#FFFFFF;
+    border-radius:0;
+    box-sizing: border-box;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    text-align:center;
+    transition: all 0.2s;
+    width:6vw;
+    height: 5vh;
+    cursor: pointer;
+}
+
+.drinks-navLink:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+    transform: translateY(-6px);
+}
+
+.drinks-navLink:active{
+     transform: translateY(2px);
+}
+
+.home-navLink-drinks{
+   position: absolute;
+   margin-top: -2vh;
+   margin-bottom: auto;
+   margin-left: -3vw;
+   margin-right: auto;
+   background-color: transparent;
+   display: inline-block;
+   border-top: none;
+   border-bottom: .2em solid black;
+   border-left: none ;
+   border-right: none;
+    font-size: 1.2vw;
+    color:black;
+    border-radius:0;
+    box-sizing: border-box;
+    font-family:'Roboto',sans-serif;
+    font-weight:500;
+    text-align:center;
+    transition: all 0.2s;
+    width:6vw;
+    height: 5vh;
+    cursor: pointer;
+    /* outline-offset: 4px; */
+    /* box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2); */
+}
+
+.home-navLink-drinks:hover{
+    color:black;
+    background-color: transparent;
+    transform: translateY(-6px);
+}
+
+.home-navLink-drinks:active{
+     transform: translateY(2px);
 }
