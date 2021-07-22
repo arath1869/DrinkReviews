@@ -5,6 +5,7 @@ import SignupFormNonModal from "./components/SignupFormPage/SignupFormNonModal";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import Home from './components/Home/index'
+import DrinkPage from './components/DrinkPage'
 
 function App() {
 
@@ -23,9 +24,12 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-      <Route exact path="/signup">
-        <SignupFormNonModal  />
-      </Route>
+          <Route exact path="/signup">
+            <SignupFormNonModal  />
+          </Route>
+          <Route exact path="/drinks/:drinkId">
+            <DrinkPage />
+          </Route>
         </Switch>
       )}
     </>

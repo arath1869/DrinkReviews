@@ -12,7 +12,7 @@ const Home = () => {
             <div className="searchBar">
             <input className="input-search-field" type="text"></input>
             </div>
-            <img className="home-background" src= "https://i.ibb.co/6gwK37r/Screen-Shot-2021-07-19-at-4-09-31-PM.png" alt="fontpage"/>
+                <img className="home-background" src= "https://i.ibb.co/r293YX9/usable-home.png" alt="fontpage"/>
             <div>
                 <CreateDrinksForm />
             </div>
@@ -24,3 +24,4 @@ const Home = () => {
     )
 }
 export default Home
+
