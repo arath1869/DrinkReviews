@@ -6,7 +6,7 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import Home from './components/Home/index'
 import DrinkPage from './components/DrinkPage'
-import AllDrinks from './components/AllDrinks'
+import AllDrinks from './components/allDrinks/index'
 
 function App() {
 
