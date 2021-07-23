@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useLocation} from 'react-router-dom';
+import { NavLink, useLocation, useParams} from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
@@ -38,12 +38,14 @@ function Navigation({ isLoaded }) {
                 {isLoaded && sessionLinks}
         </ul>
         <div className='navDiv'>
+                {location.pathname !== '/' && 
                 <NavLink exact to="/">
-                    <button className="home-navLink">Home</button>
-                </NavLink>
+                    <button className="drinks-navLink">Home</button>
+                </NavLink>}
+                {!(location.pathname.startsWith('/drinks')) && 
                 <NavLink exact to="/drinks">
-                    <button className="drinks-navLink">Drinks</button>
-                </NavLink>
+                    <button className="home-navLink">Drinks</button>
+                </NavLink>}
         </div>
         </div>
     );

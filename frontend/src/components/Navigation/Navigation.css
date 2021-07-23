@@ -56,20 +56,22 @@
     margin-right: 90%;
 }
 
+
+
 .drinks-navLink{
-    position: absolute;
+   position: absolute;
    margin-top: -2vh;
    margin-bottom: auto;
-   margin-left: 5vw;
+   margin-left: -3vw;
    margin-right: auto;
    background-color: transparent;
    display: inline-block;
    border-top: none;
-   border-bottom: .2em solid #FFFFFF;
+   border-bottom: .3em solid black;
    border-left: none ;
    border-right: none;
     font-size: 1.2vw;
-    color:#FFFFFF;
+    color:black;
     border-radius:0;
     box-sizing: border-box;
     font-family:'Roboto',sans-serif;
@@ -82,8 +84,6 @@
 }
 
 .drinks-navLink:hover{
-    color:#000000;
-    background-color:#FFFFFF;
     transform: translateY(-6px);
 }
 

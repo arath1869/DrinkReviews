@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getDrinks } from '../../store/drinks';
 import { getUsers } from '../../store/user';
 import { NavLink } from "react-router-dom";
-
+import './AllDrinks.css'
 
 
 const AllDrinks = () => {
@@ -27,6 +27,7 @@ return (
         <div>
             <img className='home-background' src="https://i.ibb.co/gvDpfnR/fully-finished-cropped500.png" alt="drink-page-background" />
         </div>
+        <div className="title_allDrinks">All Drinks</div>
         <div>{newArray.map((element) => (
             <div key={element}>
                 {`The name of this drink is ${allDrinks[element]?.title}, it was posted by

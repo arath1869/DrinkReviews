@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import './DemoLogin.css'
 
 const DemoLogin = () => {
     const dispatch = useDispatch();
-    // const sessionUser = useSelector(state => state.session.user);
+    const location = useLocation()
     const [credential, setCredential] = useState('Demo');
     const [password, setPassword] = useState('password');
     const [errors, setErrors] = useState([]);
@@ -43,7 +43,12 @@ const DemoLogin = () => {
                     required
                 />
             </label>
+            {location.pathname==='/' &&
             <button className="demo-button" type="submit">Demo</button>
+            }
+            {location.pathname !== '/' &&
+                <button className="demo-button-light" type="submit">Demo</button>
+            }
         </form>
     );
 }

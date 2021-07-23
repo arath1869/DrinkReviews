@@ -1,0 +1,11 @@
+.title_allDrinks{
+    text-align: center;
+    font-family:'Roboto',sans-serif;
+    font-size: 4vh;
+    color: white;
+    text-shadow: 2px 2px 1px rgba(220, 20, 60, 0.5);
+    background-color: #b0d2cf;
+    margin-top: -1%;
+    height: 100px;
+    line-height: 100px;
+}

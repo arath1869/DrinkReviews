@@ -58,7 +58,10 @@
     text-align: center;
     border-radius: 0px 0px 20px 20px;
     transition: all 0.2s;
+    height: 250px;
+    max-height: 250px;
 }
+
 
 .mostRecentPhoto-1:hover{
     transform: translateY(-6px);
@@ -70,6 +73,8 @@
     text-align: center;
     border-radius: 0px 0px 20px 20px;
     transition: all 0.2s;
+    height: 250px;
+    max-height: 250px;
 }
 
 .mostRecentPhoto-2:hover{
@@ -82,6 +87,8 @@
     text-align: center;
     border-radius: 0px 0px 20px 20px;
     transition: all 0.2s;
+    max-height: 250px;
+    height: 250px;
 }
 
 .mostRecentPhoto-3:hover{
@@ -94,11 +101,61 @@
     text-align: center;
     border-radius: 0px 0px 20px 20px;
     transition: all 0.2s;
+    max-height: 250px;
+    height: 250px;
 }
 
 .mostRecentPhoto-4:hover{
     transform: translateY(-6px);
 }
+
+.mostRecentPhoto-1-name{
+    color:teal;
+    grid-area:space1-name;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    text-align: center;
+    font-size: 15px;
+}
+
+.mostRecentPhoto-2-name{
+    color:teal;
+    grid-area:space2-name;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    text-align: center;
+}
+
+.mostRecentPhoto-3-name{
+    color:teal;
+    grid-area:space3-name;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    text-align: center;
+  
+}
+
+.mostRecentPhoto-4-name{
+    color:teal;
+    grid-area:space4-name;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    text-align: center;
+}
+
+.recentNavLink{
+    text-decoration: none;
+}
+
+
 
 .mostRecentImages {
     margin-left: 10%;
@@ -108,7 +165,9 @@
     grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
     grid-template-rows: auto;
     grid-template-areas:
-    "space1 space2 space3 space4";
+    "space1 space2 space3 space4"
+    "space1-name space2-name space3-name space4-name"
+    ;
 }
 
 .title_mostRecent{
@@ -123,3 +182,4 @@
     height: 100px;
     line-height: 100px;
 }
+

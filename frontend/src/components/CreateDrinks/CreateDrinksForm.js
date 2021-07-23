@@ -9,7 +9,7 @@ const CreateDrinksForm = () => {
     const history = useHistory();
     const [imageURL, setImageURL] = useState('');
     const [title, setTitle] = useState('');
-    const [userId, setUserId]=useState('')
+    let [userId, setUserId]=useState(``)
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -32,11 +32,12 @@ const CreateDrinksForm = () => {
         e.preventDefault();
     };
     if(sessionUser){
+        userId=sessionUser.id
         return (
             <section>
                 <form onSubmit={handleSubmit}>
                     <input onChange={(event) => setUserId(event.target.value)}
-                        type="text"
+                        type="hidden"
                         placeholder="User Id"
                         value={userId} />
                     <input onChange={(event) => setImageURL(event.target.value)}

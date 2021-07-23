@@ -27,24 +27,28 @@ const RecentDrinks = () => {
         <div>
         <div className="title_mostRecent"> Most Recent Drinks Posted</div>
         <div className="mostRecentImages">
-            <NavLink to={`/drinks/${mostRecent1}`} >
+            <NavLink className="recentNavLink"to={`/drinks/${mostRecent1}`} >
                 <div className="mostRecentPhoto-1">
                     <img src={`${drink1?.imageURL}`} alt="drink1" />
+                    <div className='mostRecentPhoto-1-name'>{`${drink1?.title}`}</div>
                 </div>
             </NavLink>
-            <NavLink to={`/drinks/${mostRecent2}`}>
+            <NavLink className="recentNavLink" to={`/drinks/${mostRecent2}`}>
                 <div className="mostRecentPhoto-2">
                     <img src={`${drink2?.imageURL}`} alt="drink2" />
+                        <div className='mostRecentPhoto-2-name'>{`${drink2?.title}`}</div>
                 </div>
             </NavLink>
-            <NavLink to={`/drinks/${mostRecent3}`}>
+            <NavLink className="recentNavLink" to={`/drinks/${mostRecent3}`}>
                 <div className="mostRecentPhoto-3">
                     <img src={`${drink3?.imageURL}`} alt="drink3" />
+                    <div className='mostRecentPhoto-3-name'>{`${drink3?.title}`}</div>
                 </div>
             </NavLink>
-            <NavLink to={`/drinks/${mostRecent4}`}>
+            <NavLink className="recentNavLink"to={`/drinks/${mostRecent4}`}>
                 <div className="mostRecentPhoto-4">
                     <img src={`${drink4?.imageURL}`} alt="drink4" />
+                        <div className='mostRecentPhoto-4-name'>{`${drink4?.title}`}</div>
                 </div>
             </NavLink>
         </div>
