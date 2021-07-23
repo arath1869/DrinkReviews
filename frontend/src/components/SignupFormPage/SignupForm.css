@@ -1,0 +1,7 @@
+.signup-form{
+    display: block;
+    margin: 2.2em auto;
+    font-family:'Roboto',sans-serif;
+    width: 65%;
+    padding: 12px 20px;
+}

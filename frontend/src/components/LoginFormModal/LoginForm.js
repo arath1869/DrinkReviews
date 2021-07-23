@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import SignupFormModal from '../SignupFormPage/index'
 import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
 import './LoginForm.css'
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Modal } from '../../context/Modal';
+import SignupFormPage from '../SignupFormPage/SignupForm'
 
 function LoginForm() {
     const dispatch = useDispatch();
+    const [showModal, setShowModal] = useState(false);
     const [credential, setCredential] = useState("");
     const [password, setPassword] = useState("");
     const [errors, setErrors] = useState([]);
@@ -48,7 +50,13 @@ function LoginForm() {
                 />
             </label>
             <button className="modal-login-button" type="submit">Log In</button>
-                <div className="form-signup-redirect">Don't have an account? <NavLink className="signupNavLink" to='/signup'>Signup</NavLink></div>
+                <div className="form-login-redirect">Don't Have An Account? <Link className="signupNavLink" onClick={() => setShowModal(true)}>Signup</Link>
+                    {showModal && (
+                        <Modal onClose={() => setShowModal(false)}>
+                            <SignupFormPage />
+                        </Modal>
+                    )}
+                </div>
         </form>
         </div>
     );

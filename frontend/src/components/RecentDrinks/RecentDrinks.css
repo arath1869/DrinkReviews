@@ -173,7 +173,7 @@
 .title_mostRecent{
     text-align: center;
     font-family:'Roboto',sans-serif;
-    font-size: 4vh;
+    font-size:4vw;
     color: white;
     text-shadow: 2px 2px 1px rgba(220, 20, 60, 0.5);
     background-color: #b0d2cf;

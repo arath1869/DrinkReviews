@@ -17,10 +17,6 @@ function Navigation({ isLoaded }) {
     );
      
     } 
-    
-    else if(location.pathname === '/signup') {
-       return null
-    } 
 
     else {
         sessionLinks = (

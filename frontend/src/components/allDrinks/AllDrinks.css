@@ -6,6 +6,68 @@
     text-shadow: 2px 2px 1px rgba(220, 20, 60, 0.5);
     background-color: #b0d2cf;
     margin-top: -1%;
-    height: 100px;
+    height: 115px;
     line-height: 100px;
+}
+
+.allDrinks-grid{
+  margin-left: 25%;  
+  margin-right: 25%;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)1fr);
+  grid-gap: 1rem;
+  justify-items: start;
+}
+
+.allDrinks-grid > div {
+  background: #EDE7F6;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  width: 100%;
+
+}
+
+.grid-img{
+    overflow: hide;
+}
+
+.grid-img > img{
+    max-height: 250px;
+    max-width: auto;
+    height: 20vw;
+    object-fit: cover;
+    float: left;
+}
+
+.allDrinks-name{
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    text-align: center;
+    font-size: 15px;
+}
+
+.caption {
+    display: block;
+    color: teal;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    text-align: center;
+    font-size: 20px;
+}
+
+.star-rating{
+    margin-top: 5%;
+    display: block;
+    text-align: center;
+}
+
+.postNewDrink-Link{
+    color: #B80f0a;
+    font-size: 1.6vh;
+    margin-top: -65px;
+    font-family:'Roboto',sans-serif;
+    text-shadow: none;
 }

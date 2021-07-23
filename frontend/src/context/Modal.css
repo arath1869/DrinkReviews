@@ -20,10 +20,21 @@
 }
 
 #modal-content {
-  position: absolute;
+  position: fixed;
   background-color:#b0d2cf;
   height: 60%;
   width: 25%;
+  min-width: 300px;
+  max-width: 341px;
+  min-height: 520px;
   border-radius: 25px;
-  overflow: hidden;
+  overflow: auto;
+}
+
+.cancelModalLink{
+color: red;
+font-weight: 500;
+padding-left: 42.5%;
+padding-right: 42.5%;
+
 }

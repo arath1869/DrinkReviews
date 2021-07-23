@@ -1,0 +1,47 @@
+.img-form{
+    max-height:auto;
+    max-width: 40px;
+    height: 100%;
+    width: 100%;
+}
+
+.createDrinks-form__img{
+    display: block;
+    margin:0 auto;
+    padding: 12px 0px;
+}
+
+.createDrinks-form__input-name{
+    display: block;
+    /* margin: 2em auto; */
+    margin-top: 2em;
+    margin-bottom: 0.2em;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:'Roboto',sans-serif;
+    width: 65%;
+    padding: 12px 20px;
+}
+
+.createDrinks-form__input-url{
+    display: block;
+    /* margin: 2em auto; */
+    margin-top: 0.2em;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:'Roboto',sans-serif;
+    width: 65%;
+    padding: 12px 20px;
+
+}
+
+.caption-createDrink {
+    display: block;
+    color: red;
+    font-family:'Roboto',sans-serif;
+    font-weight:500;
+    text-align: center;
+    font-size: 1.6vh;
+    padding-bottom: 8px;
+}

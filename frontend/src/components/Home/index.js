@@ -1,6 +1,5 @@
 import './Home.css'
 import React from "react"
-import CreateDrinksForm from '../CreateDrinks/CreateDrinksForm'
 import RecentDrinks from '../RecentDrinks'
 
 
@@ -13,9 +12,6 @@ const Home = () => {
             <input className="input-search-field" type="text"></input>
             </div>
                 <img className="home-background" src= "https://i.ibb.co/r293YX9/usable-home.png" alt="fontpage"/>
-            <div>
-                <CreateDrinksForm />
-            </div>
             <div>
                 <RecentDrinks />
             </div>

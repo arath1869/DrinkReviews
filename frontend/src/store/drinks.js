@@ -32,6 +32,21 @@ export const createDrink = (data) => async dispatch => {
     }
 }
 
+export const deleteDrink = (drink) => async dispatch => {
+    const response = await csrfFetch(`/api/drinks/${drink.id}`, 
+    {
+        method: 'DELETE',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(drink),
+    })
+    if(response.ok) {
+       
+        dispatch(deleteOne(drink))
+        
+
+    }
+}
+
 export const getDrinks = () => async dispatch => {
     const response = await csrfFetch(`/api/drinks`);
     if(response.ok){
@@ -85,7 +100,7 @@ const drinksReducer = (state=initialState, action) => {
         }
         case DELETE_ONE: {
             const newState={...state};
-            delete newState[action.itemId];
+            delete newState[action.drinkId];
             return newState;
         }
         default:

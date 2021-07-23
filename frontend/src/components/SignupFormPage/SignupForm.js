@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link, NavLink } from "react-router-dom";
 import * as sessionActions from "../../store/session";
+import LoginForm from '../LoginFormModal/LoginForm';
+import { Modal } from '../../context/Modal';
 import './SignupForm.css'
 
 
@@ -13,6 +15,7 @@ function SignupFormPage() {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [errors, setErrors] = useState([]);
+    const [showModal, setShowModal] = useState(false);
 
     if (sessionUser) return <Redirect to="/" />;
 
@@ -36,43 +39,42 @@ function SignupFormPage() {
             <ul>
                 {errors.map((error, idx) => <li key={idx}>{error}</li>)}
             </ul>
-            <label>
-                Email
-        <input
+        <input className="signup-form"
+            placeholder="Enter Your Email"
                     type="text"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
                 />
-            </label>
-            <label>
-                Username
-        <input
+        <input className="signup-form"
+                    placeholder="Enter Desired Username"
                     type="text"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     required
                 />
-            </label>
-            <label>
-                Password
-        <input
+        <input className="signup-form"
+                    placeholder="Password"
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
-            </label>
-            <label>
-                Confirm Password
-        <input
+        <input className="signup-form"
+                    placeholder="Confirm Password"
                     type="password"
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     required
                 />
-            </label>
-            <button type="submit">Sign Up</button>
+            <button className="modal-login-button" type="submit">Sign Up</button>
+                <div className="form-signup-redirect">Already Have An Account? <Link className="signupNavLink" onClick={() => setShowModal(true)}>Login</Link>
+                    {showModal && (
+                        <Modal onClose={() => setShowModal(false)}>
+                            <LoginForm />
+                        </Modal>
+                    )}
+                </div>
         </form>
         </div>
     );

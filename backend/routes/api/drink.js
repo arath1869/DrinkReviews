@@ -21,9 +21,9 @@ router.post(
 )
 
 
-router.delete("/:id", asyncHandler(async function(req,res){
-    const drinkId = await DrinksRepository.deleteDrink(req.params.id);
-    return res.json({ drinkId })
+router.delete('/:id', asyncHandler(async function(req,res){
+    const id = await DrinksRepository.deleteDrink(req.params.id);
+    return res.json({ id })
 }))
 
 module.exports = router;

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch,useSelector } from 'react-redux';
 import { createDrink } from '../../store/drinks';
 import { useHistory } from 'react-router-dom';
+import './CreateDrinks.css'
 
 const CreateDrinksForm = () => {
     const dispatch = useDispatch();
@@ -27,31 +28,31 @@ const CreateDrinksForm = () => {
         }
     };
 
-
-    const handleCancelClick = (e) => {
-        e.preventDefault();
-    };
     if(sessionUser){
         userId=sessionUser.id
         return (
+            <div className="form_div">
+            <div className="form_title">{`Post your Drink!`} </div>
             <section>
-                <form onSubmit={handleSubmit}>
+                <form className="form" onSubmit={handleSubmit}>
                     <input onChange={(event) => setUserId(event.target.value)}
                         type="hidden"
                         placeholder="User Id"
                         value={userId} />
-                    <input onChange={(event) => setImageURL(event.target.value)}
+                    <input className="createDrinks-form__input-name" onChange={(event) => setTitle(event.target.value)}
+                            type="text"
+                            placeholder="Drink Name and Flavor"
+                            value={title} />
+                    <img className="createDrinks-form__img img-form" src={`${imageURL}`} alt="preview"/>
+                        <span className="caption-createDrink">Image Preview</span>
+                    <input className="createDrinks-form__input-url" onChange={(event) => setImageURL(event.target.value)}
                         type="text"
                         placeholder="Image URL"
                         value={imageURL} />
-                    <input onChange={(event) => setTitle(event.target.value)}
-                        type="text"
-                        placeholder="Title"
-                        value={title} />
-                    <button type="submit">Create new Drink</button>
-                    <button type="button" onClick={handleCancelClick}>Cancel</button>
+                    <button className="modal-login-button" type="submit">Create new Drink</button>
                 </form>
             </section>
+            </div>
         );
     } else {
         return null;

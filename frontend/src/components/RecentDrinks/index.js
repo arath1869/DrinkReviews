@@ -36,7 +36,7 @@ const RecentDrinks = () => {
             <NavLink className="recentNavLink" to={`/drinks/${mostRecent2}`}>
                 <div className="mostRecentPhoto-2">
                     <img src={`${drink2?.imageURL}`} alt="drink2" />
-                        <div className='mostRecentPhoto-2-name'>{`${drink2?.title}`}</div>
+                    <div className='mostRecentPhoto-2-name'>{`${drink2?.title}`}</div>
                 </div>
             </NavLink>
             <NavLink className="recentNavLink" to={`/drinks/${mostRecent3}`}>

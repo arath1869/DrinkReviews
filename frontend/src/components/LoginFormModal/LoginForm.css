@@ -53,8 +53,13 @@ input:focus{
 }
 
 .form-signup-redirect{
- margin-top: 7em;
+ margin-top: 4.5em;
  text-align: center;
+}
+
+.form-login-redirect{
+    margin-top: 7em;
+    text-align: center;
 }
 
 .signupNavLink {

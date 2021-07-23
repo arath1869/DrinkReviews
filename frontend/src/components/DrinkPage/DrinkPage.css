@@ -1,0 +1,21 @@
+.one-drink-page{
+    margin-left: 10%;
+    margin-right: 20%;
+}
+
+.grid-img-drink-page{
+    overflow: hide;
+}
+
+.grid-img-drink-page > img{
+    max-height: 400px;
+    min-height: 200px;
+    max-width: auto;
+    height: 31vw;
+    object-fit: cover;
+    float: left;
+}
+
+/* .userName-drinkpage{
+    
+} */

@@ -1,4 +1,5 @@
 import React, { useContext, useRef, useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import ReactDOM from 'react-dom';
 import './Modal.css';
 
@@ -31,6 +32,7 @@ export function Modal({ onClose, children }) {
             <div id="modal-background" onClick={onClose} />
             <div id="modal-content">
                 {children}
+                <Link className="cancelModalLink" onClick={onClose}>Cancel</Link>
             </div>
         </div>,
         modalNode

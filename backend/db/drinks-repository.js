@@ -17,7 +17,7 @@ async function list(){
 async function deleteDrink(drinkId){
     const drink = await Drink.findByPk(drinkId);
     if(!drink) throw new Error('Cannot find drink');
-    await Drink.destroy({where: { id: drink.id }});
+    await Drink.destroy({ where: { id: drink.id } });
     return drink.id
 }
 
