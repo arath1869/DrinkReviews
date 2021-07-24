@@ -33,7 +33,7 @@ const DrinkPage = () => {
     e.preventDefault();
     const deletedDrink = await dispatch(deleteDrink(currentDrink))
     console.log(deletedDrink)
-        history.push(`/drinks/`);
+    history.push(`/drinks`);
     }
 
     return (

@@ -71,3 +71,43 @@
     font-family:'Roboto',sans-serif;
     text-shadow: none;
 }
+
+.allDrinks-img{
+    max-height: 300px;
+    max-width: 250px;
+    min-height: 140px;
+    min-width: 100px;
+    height: 25vw;
+    width: 25vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid black;
+    overflow: hidden;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    flex-wrap: nowrap;
+    float: left;
+    margin-left: 10%;
+}
+
+.allDrinks-container {
+     border: 2px solid black;
+     display: flex;
+     flex-direction: column;
+}
+
+.drink-info-div{
+    border: 2px solid black;
+    max-height: 300px;
+    max-width: auto;
+    min-height: 140px;
+    min-width: 3px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 25vw;
+    width: 50vw;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    float: left;
+}

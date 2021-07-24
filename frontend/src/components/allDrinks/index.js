@@ -47,7 +47,7 @@ return (
                 )}
         </div>
         </div>
-        <div className="allDrinks-grid">{newArray.map((element) => (
+        {/* <div className="allDrinks-grid">{newArray.map((element) => (
             <div className="grid-img" key={element}>
                 <span className="caption">{`${allDrinks[element]?.title}`}</span>
 
@@ -55,11 +55,22 @@ return (
         
 
                 <div className="star-rating">*****</div>
-                {/* {`The name of this drink is ${allDrinks[element]?.title}, it was posted by
-                ${allUsers[(allDrinks[element].userId)]?.username}
-                `} */}
             </div>
-        ))}</div>
+        ))}
+        </div> */}
+
+        <div className="allDrinks-container">{newArray.map((element) => (
+            <div key={element} className="link-container">
+            <div className="allDrinks-img" style={
+                { backgroundImage: `url(${allDrinks[element]?.imageURL})` }
+            }>
+            </div>
+                <div className="drink-info-div"></div>
+            </div>
+        ))}
+
+
+        </div>
     </div>
 )
 
