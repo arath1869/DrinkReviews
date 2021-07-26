@@ -11,7 +11,7 @@ const load = list => ({
 
 const update = (review) => ({
     type: UPDATE_ONE,
-    review
+    review,
 })
 
 const addOneReview = review => ({

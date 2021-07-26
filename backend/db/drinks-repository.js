@@ -14,20 +14,20 @@ async function list(){
     return await Drink.findAll()
 }
 
-async function updateDrink(drink) {
-    const id = drink.id;
-    delete drink.id
-    console.log({ drink, id });
-    await Drink.update(
-        drink,
-        {
-            where: { id },
-            returning: true,
-            plain: true,
-        }
-    );
-    return await Drink.findByPk(id)
-}
+// async function updateDrink(drink) {
+//     const id = drink.id;
+//     delete drink.id
+//     console.log({ drink, id });
+//     await Drink.update(
+//         drink,
+//         {
+//             where: { id },
+//             returning: true,
+//             plain: true,
+//         }
+//     );
+//     return await Drink.findByPk(id)
+// }
 
 async function deleteDrink(drinkId){
     const drink = await Drink.findByPk(drinkId);

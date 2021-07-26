@@ -16,7 +16,7 @@ router.post(
     asyncHandler(async function (req, res) {
         const { rating, comment, userId, drinksId } = req.body;
         const id = await ReviewsRepository.create({ rating, comment, userId, drinksId });
-        return res.json(id)
+        return res.json({id})
     })
 )
 

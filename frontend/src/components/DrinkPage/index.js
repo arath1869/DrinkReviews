@@ -9,7 +9,6 @@ import { deleteDrink } from '../../store/drinks'
 import { Modal } from '../../context/Modal';
 import CreateReviewsForm from '../CreateReviews/CreateReviewsForm'
 import LoginForm from '../LoginFormModal/LoginForm';
-import UpdateDrinksForm from '../UpdateDrinks/index'
 import './DrinkPage.css'
 
 const DrinkPage = () => {

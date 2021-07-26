@@ -2,17 +2,17 @@ import { csrfFetch } from './csrf';
 const LOAD = 'drinks/LOAD';
 const ADD_ONE='drinks/ADD_ONE';
 const DELETE_ONE='/drinks/DELETE_ONE'
-const UPDATE_ONE = '/drinks/UPDATE_ONE'
+// const UPDATE_ONE = '/drinks/UPDATE_ONE'
 
 const load = list => ({
     type: LOAD,
     list,
 });
 
-const update = (drink) => ({
-    type: UPDATE_ONE,
-    drink,
-})
+// const update = (drink) => ({
+//     type: UPDATE_ONE,
+//     drink,
+// })
 
 const addOneDrink = drink => ({
     type: ADD_ONE,
@@ -38,19 +38,19 @@ export const createDrink = (data) => async dispatch => {
     }
 }
 
-export const editDrink = (data, id) => async dispatch => {
-    const response = await csrfFetch(`/api/drinks/${id}`,
-        {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        })
-    if (response.ok) {
-        const drink = await response.json()
-        dispatch(update(drink))
-        return drink
-    }
-}
+// export const editDrink = (data, id) => async dispatch => {
+//     const response = await csrfFetch(`/api/drinks/${id}`,
+//         {
+//             method: 'PUT',
+//             headers: { 'Content-Type': 'application/json' },
+//             body: JSON.stringify(data)
+//         })
+//     if (response.ok) {
+//         const drink = await response.json()
+//         dispatch(update(drink))
+//         return drink
+//     }
+// }
 
 export const deleteDrink = (drink) => async dispatch => {
     const response = await csrfFetch(`/api/drinks/${drink.id}`, 
@@ -81,7 +81,7 @@ const initialState = {
 
 const sortList = (list) => {
     return list.sort((drinkA,drinkB) => {
-        return drinkA.updatedAt-drinkB.updatedAt;
+        return drinkA.id-drinkB.id;
     }).map((drink)=>drink.id)
 }
 
@@ -124,12 +124,12 @@ const drinksReducer = (state=initialState, action) => {
             return newState;
         }
 
-        case UPDATE_ONE: {
-            return {
-                ...state,
-                [action.drink.id]: action.drink,
-            }
-        }
+        // case UPDATE_ONE: {
+        //     return {
+        //         ...state,
+        //         [action.drink.id]: action.drink,
+        //     }
+        // }
         default:
             return state;
     }
