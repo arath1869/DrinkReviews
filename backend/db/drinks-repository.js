@@ -40,6 +40,5 @@ module.exports={
     create,
     list,
     deleteDrink,
-    updateDrink,
 }
 
