@@ -4,7 +4,7 @@
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
-a:hover,button:hover{
+a:hover,button:hover,a:active,button:active{
     transition: none
 }
 }
@@ -15,7 +15,7 @@ a:hover,button:hover{
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
-a:hover,button:hover{
+a:hover,button:hover,a:active,button:active{
     transition: none
 }
 }
@@ -26,7 +26,7 @@ a:hover,button:hover{
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
-      a:hover,button:hover{
+      a:hover,button:hover,a:active,button:active{
     transition: none
 }
 }
@@ -39,7 +39,7 @@ body {
 
 .home-background {
     min-height: 100%;
-    min-width: 400px;
+    min-width: 300px;
     width: 100%;
     height: auto;
 }
