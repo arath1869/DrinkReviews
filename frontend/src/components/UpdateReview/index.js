@@ -1,42 +1,49 @@
 import { useState } from 'react';
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { createReview } from '../../store/reviews';
-import { useHistory, useParams,NavLink,Link } from 'react-router-dom';
-import './CreateReviews.css'
+import { useHistory, useParams } from 'react-router-dom';
+import { editReview } from '../../store/reviews'
 
-const CreateReviewsForm = () => {
-    
+const UpdateReviewsForm = () => {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user)
+    const allReviews = useSelector(state=> state.reviews)
     const history = useHistory();
-    let {drinkId} = useParams()
-    let [rating, setRating] = useState('');
-    const [comment, setComment] = useState('');
-    let [userId, setUserId] = useState(``)
-    let [drinksId, setDrinksId] = useState(``)
+    let { revId } = useParams()
+    let currentReview = allReviews[revId]
+
+
+    let [rating, setRating] = useState(currentReview?.rating);
+    const [comment, setComment] = useState(currentReview?.comment);
+    let [userId, setUserId] = useState(currentReview?.userId)
+    let [drinksId, setDrinksId] = useState(currentReview?.drinksId)
+
+    const updateRating = (e) =>setRating(e.target.value);
+    const updateComment = (e) => setComment(e.target.value);
+
+    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         const payload = {
+            ...currentReview,
             rating,
             comment,
             userId,
             drinksId
         };
 
-        let createdReview = await dispatch(createReview(payload))
-        if (createdReview) {
-            await history.push(`/reviews/${createdReview}`);
+        let updatedReview = await dispatch(editReview(payload,revId ))
+        if (updatedReview) {
+            await history.push(`/drinks/${updatedReview.drinksId}`);
         }
     };
 
     if (sessionUser) {
         userId = sessionUser.id
-        drinksId = drinkId
         return (
             <div className="form_div">
-                <div className="form_title">{`Post your Review!`} </div>
+                <div className="form_title">{`Edit your Review!`} </div>
                 <section>
                     <form className="form" onSubmit={handleSubmit}>
                         <input onChange={(event) => setUserId(event.target.value)}
@@ -47,32 +54,32 @@ const CreateReviewsForm = () => {
                             type="hidden"
                             placeholder="drinkId"
                             value={drinksId} />
-                        { rating==='' &&
-                        <div class="review-stars__container">
-                        
-                            <button className="submitReview__button" onClick={(event) => {
-                                event.preventDefault()
-                                setRating(1)
+                        {rating === '' &&
+                            <div class="review-stars__container">
+
+                                <button className="submitReview__button" onClick={(event) => {
+                                    event.preventDefault()
+                                    setRating(1)
                                 }}><i id="a" className="far fa-star"></i></button>
-                            <button className="submitReview__button" onClick={(event) => {
-                                event.preventDefault()
-                                setRating(2)
-                            }} ><i id="aa" className="far fa-star"></i></button>
-                            <button className="submitReview__button" onClick={(event) => {
-                                event.preventDefault()
-                                setRating(3)
-                            }} ><i id="aaa" className="far fa-star"></i></button>
-                            <button className="submitReview__button" onClick={(event) => {
-                                event.preventDefault()
-                                setRating(4)
-                            }} ><i id="aaaa" className="far fa-star"></i></button>
-                            <button className="submitReview__button" onClick={(event) => {
-                                event.preventDefault()
-                                setRating(5)
-                            }} ><i id="aaaaa" className="far fa-star"></i></button>
-                           
-                        </div>
-    }
+                                <button className="submitReview__button" onClick={(event) => {
+                                    event.preventDefault()
+                                    setRating(2)
+                                }} ><i id="aa" className="far fa-star"></i></button>
+                                <button className="submitReview__button" onClick={(event) => {
+                                    event.preventDefault()
+                                    setRating(3)
+                                }} ><i id="aaa" className="far fa-star"></i></button>
+                                <button className="submitReview__button" onClick={(event) => {
+                                    event.preventDefault()
+                                    setRating(4)
+                                }} ><i id="aaaa" className="far fa-star"></i></button>
+                                <button className="submitReview__button" onClick={(event) => {
+                                    event.preventDefault()
+                                    setRating(5)
+                                }} ><i id="aaaaa" className="far fa-star"></i></button>
+
+                            </div>
+                        }
 
                         {rating === 1 &&
                             <div class="review-stars__container">
@@ -209,17 +216,15 @@ const CreateReviewsForm = () => {
                             </div>
                         }
 
-                        <input className="createDrinks-form__input-name" onChange={(event) => setRating(event.target.value)}
+                        <input className="createDrinks-form__input-name" onChange={updateRating}
                             type="hidden"
                             placeholder="Rating"
                             value={rating} />
-                        <textarea className="createDrinks-form__input-url" onChange={(event) => setComment(event.target.value)}
+                        <textarea className="createDrinks-form__input-url" onChange={updateComment}
                             type="text"
                             placeholder="Review This Drink In 140 Characters Or Less!"
                             value={comment} />
-                     
-                        <button className="modal-login-button" type="submit">Post Review</button>
-                      
+                        <button className="modal-login-button" type="submit">Publish Edits</button>
                     </form>
                 </section>
             </div>
@@ -229,4 +234,4 @@ const CreateReviewsForm = () => {
     }
 }
 
-export default CreateReviewsForm;
+export default UpdateReviewsForm;

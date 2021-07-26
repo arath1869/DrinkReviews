@@ -20,6 +20,14 @@ router.post(
     })
 )
 
+router.put(
+    "/:id",
+    asyncHandler(async function(req,res) {
+        const review = await ReviewsRepository.updateReview(req.body)
+        return res.json(review)
+    })
+)
+
 
 router.delete('/:id', asyncHandler(async function (req, res) {
     const id = await ReviewsRepository.deleteReview(req.params.id);

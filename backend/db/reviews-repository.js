@@ -15,6 +15,21 @@ async function list() {
     return await Review.findAll()
 }
 
+async function updateReview(review){
+    const id=review.id;
+    delete review.id
+    console.log({ review,id });
+    await Review.update(
+        review,
+        {
+            where: { id },
+            returning: true,
+            plain: true,
+        }
+    );
+    return await Review.findByPk(id)
+}
+
 async function deleteReview(reviewId) {
     const review = await Review.findByPk(reviewId);
     if (!review) throw new Error('Cannot find review');
@@ -25,5 +40,6 @@ async function deleteReview(reviewId) {
 module.exports = {
     create,
     list,
-    deleteReview
+    deleteReview,
+    updateReview,
 }

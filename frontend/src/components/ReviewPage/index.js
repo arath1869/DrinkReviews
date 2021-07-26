@@ -1,11 +1,13 @@
 import React from "react"
-import { useEffect } from "react"
+import { useEffect,useState } from "react"
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useHistory, Link } from 'react-router-dom';
 import { getDrinks } from '../../store/drinks';
 import { getReviews } from '../../store/reviews'
 import { getUsers } from '../../store/user';
 import { deleteReview } from '../../store/reviews';
+import { Modal } from '../../context/Modal';
+import UpdateReviewsForm from '../UpdateReview/index'
 import './ReviewPage.css'
 
 const ReviewPage = () => {
@@ -37,6 +39,8 @@ const ReviewPage = () => {
     let rating=currentReview?.rating
     let currentDrinkId=currentReview?.drinksId
     console.log(sessionUser)
+
+    const [showModal, setShowModal] = useState(false);
 
     const handleDelete = async (e) => {
         e.preventDefault();
@@ -119,7 +123,15 @@ const ReviewPage = () => {
                     </Link>
                     {
                         (sessionUser?.id === usernameId) &&
+                        <>
+                        <button className="review-button" onClick={() => setShowModal(true)}>Edit</button>
+                            {(showModal) && (
+                                <Modal onClose={() => setShowModal(false)}>
+                                    <UpdateReviewsForm />
+                                </Modal>
+                            )}
                         <button onClick={handleDelete} className="review-button" >Delete</button>
+                        </>
                     }
                 </div>
             </div>

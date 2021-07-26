@@ -57,10 +57,10 @@ margin-bottom: 10px;
 .oneReview-button__container{
     /* border: 20px solid black; */
    display: flex;
-    max-width: 500px;
+    max-width: 600px;
     height: auto;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-left: 60px;
     margin-right:60px;
     margin-top: 10px;
