@@ -1,3 +1,7 @@
+@media (hover: none) {
+    a:hover { color: inherit; }
+}
+
 
 .grid-img-drink-page{
     min-height: 250px;
