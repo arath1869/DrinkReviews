@@ -1,0 +1,55 @@
+.oneReview-container{
+    /* border: 20px solid black; */
+    display: flex;
+    max-width: 700px;
+    max-height: 240px;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.stars-holder__review{
+    /* border: 2px solid black; */
+    min-height: 250px;
+    min-width: 100px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.userName-reviewpage{
+    font-family:'Roboto',sans-serif;
+    font-size: calc(12px + 0.2vw);
+    padding-top: 30px;
+    font-weight: bold;
+    color: black;
+    overflow: hidden;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.review-content{
+    color: #C1C1C1;
+    /* border: 2px solid black; */
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: calc(12px + 0.5vw);
+    font-weight: bold;
+    height: auto;
+    min-height: 100px;
+    min-width: 300px;
+    font-family:'Roboto',sans-serif;
+}
+
+.star-rating__reviews{
+/* border: 2px solid black; */
+font-size: calc(10px + 3vw);
+/* color: #FFCD3C; */
+margin-top: 20px;
+margin-bottom: 10px;
+}

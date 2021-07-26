@@ -47,28 +47,23 @@ return (
                 )}
         </div>
         </div>
-        {/* <div className="allDrinks-grid">{newArray.map((element) => (
-            <div className="grid-img" key={element}>
-                <span className="caption">{`${allDrinks[element]?.title}`}</span>
-
-                <img src={`${allDrinks[element]?.imageURL}`} alt="drinks-pic" />
-        
-
-                <div className="star-rating">*****</div>
-            </div>
-        ))}
-        </div> */}
-
         <div className="allDrinks-container">{newArray.map((element) => (
             <div key={element} className="link-container">
+            <div className="all-drinks-image-container">
+            <Link to={`/drinks/${element}`}>  
             <div className="allDrinks-img" style={
                 { backgroundImage: `url(${allDrinks[element]?.imageURL})` }
             }>
             </div>
-                <div className="drink-info-div"></div>
+                </Link>
+            </div>
+                <div className="drink-info-div">
+                    <Link className="linkToDrink" to={`/drinks/${element}`}>
+                    <div className="drinks-title">{`${allDrinks[element]?.title}`}</div>
+                    </Link>
+                </div>
             </div>
         ))}
-
 
         </div>
     </div>

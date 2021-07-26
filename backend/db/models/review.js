@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    drinkId: {
+    drinksId: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
     })
     Review.belongsTo(models.Drink, {
       as:'reviews',
-      foreignKey:'drinkId'
+      foreignKey:'drinksId'
     })
   };
   return Review;

@@ -1,21 +1,178 @@
-.one-drink-page{
-    margin-left: 10%;
-    margin-right: 20%;
-}
 
 .grid-img-drink-page{
-    overflow: hide;
+    min-height: 250px;
+    min-width: 150px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .grid-img-drink-page > img{
-    max-height: 400px;
-    min-height: 200px;
-    max-width: auto;
+    flex: 2;
+    max-height: 300px;
+    min-height: 300px;
+    max-width: 160px;
+    /* margin-top: 1.2vw; */
     height: 31vw;
-    object-fit: cover;
-    float: left;
+    object-fit: contain;
 }
 
-/* .userName-drinkpage{
+.oneDrink-container{
+    display: flex;
+    max-width: 1200px;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
     
-} */
+}
+
+.userName-drinkpage{
+    /* margin-top: 20px;
+    margin-right: 2%; */
+    font-family:'Roboto',sans-serif;
+    font-size: calc(12px + 0.2vw);
+    font-weight: bold;
+    max-width: 150px;
+    /* min-width: 150px; */
+    /* min-height: 250px; */
+    /* margin-left: 10vw; */
+    /* margin-right:10vw; */
+    color: black;
+    overflow: hidden;
+    text-align: center;
+    text-transform: capitalize;
+    flex:1;
+    padding-top: 220px;
+}
+
+.delete-drink{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    max-height: 30px;
+    min-height:22px;
+    background-color:#B80f0a;
+    font-size: 16px;
+    color:white;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    transition: all 0.2s;
+    /* width: 75%;
+    height: 8%; */
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    /* overflow: hidden;
+    text-overflow: ellipsis; */
+    white-space: nowrap;
+}
+
+.stars-holder{
+    min-height: 250px;
+    text-align: center;
+    min-width: auto;
+    white-space: nowrap;
+}
+
+.userName-drinkpage__container{
+    text-align: center;
+    min-height: 250px;
+    min-width: auto;
+    overflow: hidden;
+}
+
+.star-rating{
+
+font-size: calc(10px + 2.5vw);
+/* color: #FFCD3C; */
+
+}
+
+.fa-star{
+color: gold;
+}
+
+.fa-star-half-alt{
+    color: gold;
+}
+
+.average-review{
+font-family:'Roboto',sans-serif;
+padding-top: 23px;
+font-size: calc(10px + 1vw);
+font-weight: bold;
+/* background-color: transparent; */
+}
+
+.number-of-reviews{
+    /* float: right; */
+    font-size: calc(12px + 0.2vw);
+    text-align: left;
+    font-weight: bold;
+    color: #D4D4D4;
+}
+
+.posted-drink-days-ago{
+    font-weight: bold;
+    color: #D4D4D4;
+    font-size: calc(10px + 0.15vw);
+    /* text-align: center; */
+    white-space: nowrap;
+}
+
+.progress-container{
+    width: 100%;
+    display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+}
+.progress{
+  font-size: 10px;
+  font-weight: bold;
+  
+}
+
+.progress-num{
+    font-size: calc(12px + 2vw);
+    font-family:'Roboto',sans-serif;
+    width: calc(50px + 3vw);
+    height: 50px;
+}
+
+
+.oneDrink-container__buttons{
+    display: flex;
+    max-width: 500px;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.review-button{
+    font-size: calc(12px + .4vw);
+    border-radius:.1em;
+    background-color:#B80f0a;
+    color:white;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    text-align:center;
+    cursor: pointer;
+    width:6vw;
+    height: 5vh;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+    border: none;
+    min-width: 80px;
+}
+
+
+
