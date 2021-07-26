@@ -282,7 +282,7 @@ const DrinkPage = () => {
             </div>
             <div className="oneDrink-container__buttons">
                 <Link to="/drinks">
-                    <button className="review-button">Back</button>
+                    <button className="review-button__reviewPage">All Drinks</button>
                 </Link>
                     <button className="review-button" onClick={() => setShowModal(true)} >Review</button>
                     {(showModal && sessionUser) && (

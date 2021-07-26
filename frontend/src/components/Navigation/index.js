@@ -38,7 +38,7 @@ function Navigation({ isLoaded }) {
                 <NavLink exact to="/">
                     <button className="drinks-navLink">Home</button>
                 </NavLink>}
-                {!(location.pathname.startsWith('/drinks')) && 
+                {!(location.pathname.startsWith('/drinks')) && !(location.pathname.startsWith('/reviews')) &&
                 <NavLink exact to="/drinks">
                     <button className="home-navLink">Drinks</button>
                 </NavLink>}

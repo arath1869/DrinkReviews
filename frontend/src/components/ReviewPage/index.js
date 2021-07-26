@@ -1,7 +1,7 @@
 import React from "react"
 import { useEffect } from "react"
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useHistory, Link } from 'react-router-dom';
 import { getDrinks } from '../../store/drinks';
 import { getReviews } from '../../store/reviews'
 import { getUsers } from '../../store/user';
@@ -29,11 +29,21 @@ const ReviewPage = () => {
     const { revId } = useParams()
     const allReviews = useSelector(state => state.reviews)
     const allUsers = useSelector(state => state.user)
+   
     const currentReview = allReviews[revId];
     let usernameId = currentReview?.userId
     let originalPoster = allUsers[usernameId]?.username
     let reviewComment = currentReview?.comment
     let rating=currentReview?.rating
+    let currentDrinkId=currentReview?.drinksId
+    console.log(sessionUser)
+
+    const handleDelete = async (e) => {
+        e.preventDefault();
+        const deletedReview = await dispatch(deleteReview(currentReview))
+        console.log(deletedReview)
+        history.push(`/drinks/${currentDrinkId}`);
+    }
 
     return (
         <div>
@@ -102,8 +112,15 @@ const ReviewPage = () => {
                     </div>
                         <div className="review-content">{`" ${reviewComment} "`}</div>
                 </div>
-                <div className="userName-drinkpage__container">
-                    </div>
+                </div>
+                <div className="oneReview-button__container">
+                    <Link to={`/drinks/${currentDrinkId}`}>
+                        <button className="review-button__reviewPage">Back To Drink</button>
+                    </Link>
+                    {
+                        (sessionUser?.id === usernameId) &&
+                        <button onClick={handleDelete} className="review-button" >Delete</button>
+                    }
                 </div>
             </div>
         </div>
