@@ -9,6 +9,7 @@ import { deleteDrink } from '../../store/drinks'
 import { Modal } from '../../context/Modal';
 import CreateReviewsForm from '../CreateReviews/CreateReviewsForm'
 import LoginForm from '../LoginFormModal/LoginForm';
+import UpdateDrinksForm from '../UpdateDrinks/index'
 import './DrinkPage.css'
 
 const DrinkPage = () => {
@@ -274,9 +275,6 @@ const DrinkPage = () => {
                                     45 Days Ago
                         </span>
                             </div>
-                            {(sessionUser && sessionUser.id === usernameId) &&
-                                <button className="delete-drink" onClick={handleDelete}>Delete Drink</button>
-                            }
                         </div>
                     </div>
             </div>
@@ -295,6 +293,17 @@ const DrinkPage = () => {
                             <LoginForm />
                         </Modal>
                     )}
+                    {(sessionUser && sessionUser.id === usernameId) &&
+                        <>
+                        {/* <button className="review-button" onClick={() => setShowModal(true)}>Edit</button>
+                        {(showModal) && (
+                            <Modal onClose={() => setShowModal(false)}>
+                                <UpdateDrinksForm />
+                            </Modal>
+                        )} */}
+                        <button className="review-button" onClick={handleDelete}>Delete</button>
+                        </>
+                    }
             </div>
            
             <div className="allDrinks-container">{newArray.map((element) => (

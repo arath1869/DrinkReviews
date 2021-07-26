@@ -2,6 +2,7 @@ import { csrfFetch } from './csrf';
 
 const LOAD = 'user/LOAD';
 
+
 const load = list => ({
     type: LOAD,
     list,
