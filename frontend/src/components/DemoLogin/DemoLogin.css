@@ -22,15 +22,15 @@
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.demo-button:hover{
+/* .demo-button:hover{
     color:#000000;
     background-color:#FFFFFF;
     transform: translateY(-6px);
-}
+} */
 
-.demo-button:active{
+/* .demo-button:active{
      transform: translateY(2px);
-}
+} */
 
 .demo-button-light{
     position: absolute;
@@ -56,10 +56,10 @@
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.demo-button-light:hover{
+/* .demo-button-light:hover{
     transform: translateY(-6px);
-}
+} */
 
-.demo-button-light:active{
+/* .demo-button-light:active{
      transform: translateY(2px);
-}
+} */

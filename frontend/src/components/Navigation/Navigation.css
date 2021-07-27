@@ -39,12 +39,12 @@
 .home-navLink:hover{
     color:#000000;
     background-color:#FFFFFF;
-    transform: translateY(-6px);
+    /* transform: translateY(-6px); */
 }
 
-.home-navLink:active{
+/* .home-navLink:active{
      transform: translateY(2px);
-}
+} */
 
 .navDiv{
     position: absolute;
@@ -83,13 +83,13 @@
     cursor: pointer;
 }
 
-.drinks-navLink:hover{
+/* .drinks-navLink:hover{
     transform: translateY(-6px);
-}
+} */
 
-.drinks-navLink:active{
+/* .drinks-navLink:active{
      transform: translateY(2px);
-}
+} */
 
 .home-navLink-drinks{
    position: absolute;
@@ -121,9 +121,9 @@
 .home-navLink-drinks:hover{
     color:black;
     background-color: transparent;
-    transform: translateY(-6px);
+    /* transform: translateY(-6px); */
 }
 
-.home-navLink-drinks:active{
+/* .home-navLink-drinks:active{
      transform: translateY(2px);
-}
+} */

@@ -24,12 +24,12 @@
 .signup-button:hover{
     color:#000000;
     background-color:#FFFFFF;
-    transform: translateY(-6px);
+    /* transform: translateY(-6px); */
 }
 
-.signup-button:active{
+/* .signup-button:active{
      transform: translateY(2px);
-}
+} */
 
 .signup-button-light{
     background-color: transparent;
@@ -54,11 +54,11 @@
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.signup-button-light:hover{
+/* .signup-button-light:hover{
     transform: translateY(-6px);
-}
+} */
 
-.signup-button-light:active{
+/* .signup-button-light:active{
      transform: translateY(2px);
-}
+} */
 

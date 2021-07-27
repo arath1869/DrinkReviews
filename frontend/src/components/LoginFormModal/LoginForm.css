@@ -48,10 +48,10 @@ input:focus{
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.modal-login-button:hover{
+/* .modal-login-button:hover{
     transform: translateY(-6px);
     color:white;
-}
+} */
 
 .form-signup-redirect{
  margin-top: 4.5em;

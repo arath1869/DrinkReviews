@@ -24,12 +24,12 @@
 .login-button:hover{
     color:#000000;
     background-color:#FFFFFF;
-    transform: translateY(-6px);
+    /* transform: translateY(-6px); */
 }
 
-.login-button:active{
+/* .login-button:active{
      transform: translateY(2px);
-}
+} */
 
 .login-button-light{
      background-color: transparent;
@@ -54,10 +54,10 @@
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.login-button-light:hover{
+/* .login-button-light:hover{
     transform: translateY(-6px);
-}
+} */
 
-.login-button-light:active{
+/* .login-button-light:active{
      transform: translateY(2px);
-}
+} */
