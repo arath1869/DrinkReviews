@@ -213,7 +213,7 @@ const DrinkPage = () => {
                         style={{
                             width: "calc(80px + 3vw)",
                             height: "12px",
-                            border: ".5px solid black",
+                            border: "none",
                             background: `linear-gradient(to right, gold ${percent5}%, white 0%)`
                         }}
                             >{`${numberOf5}`}</div>
@@ -224,7 +224,7 @@ const DrinkPage = () => {
                                 style={{
                                     width: "calc(80px + 3vw)",
                                     height: "12px",
-                                    border: "1px solid black",
+                                    border: "none",
                                     background: `linear-gradient(to right, gold ${percent4}%, white 0%)`
                                 }}
                             >{`${numberOf4}`}</div>
@@ -235,7 +235,7 @@ const DrinkPage = () => {
                                 style={{
                                     width: "calc(80px + 3vw)",
                                     height: "12px",
-                                    border: "1px solid black",
+                                    border: "none",
                                     background: `linear-gradient(to right, gold ${percent3}%, white 0%)`
                                 }}
                             >{`${numberOf3}`}</div>
@@ -246,7 +246,7 @@ const DrinkPage = () => {
                                 style={{
                                     width: "calc(80px + 3vw)",
                                     height: "12px",
-                                    border: "1px solid black",
+                                    border: "none",
                                     background: `linear-gradient(to right, gold ${percent2}%, white 0%)`
                                 }}
                             >{`${numberOf2}`}</div>
@@ -258,7 +258,7 @@ const DrinkPage = () => {
                                 style={{
                                     width: "calc(80px + 3vw)",
                                     height: "12px",
-                                    border: "1px solid black",
+                                    border: "none",
                                     background: `linear-gradient(to right, gold ${percent1}%, white 0%)`
                                 }}
                             >{`${numberOf1}`}</div>
