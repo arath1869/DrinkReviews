@@ -1,5 +1,5 @@
 .oneReview-container{
-    /* border: 20px solid black; */
+    border: 20px solid black;
     display: flex;
     max-width: 700px;
     max-height: 240px;
@@ -34,7 +34,7 @@
 
 .review-content{
     color: #C1C1C1;
-    /* border: 2px solid black; */
+    border: 2px solid black;
     margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
@@ -47,15 +47,15 @@
 }
 
 .star-rating__reviews{
-/* border: 2px solid black; */
+border: 2px solid black;
 font-size: calc(10px + 3vw);
-/* color: #FFCD3C; */
+color: #FFCD3C;
 margin-top: 20px;
 margin-bottom: 10px;
 }
 
 .oneReview-button__container{
-    /* border: 20px solid black; */
+    border: 20px solid black;
    display: flex;
     max-width: 600px;
     height: auto;
