@@ -9,6 +9,7 @@ import { deleteDrink } from '../../store/drinks'
 import { Modal } from '../../context/Modal';
 import CreateReviewsForm from '../CreateReviews/CreateReviewsForm'
 import LoginForm from '../LoginFormModal/LoginForm';
+import UpdateDrinksForm from "../UpdateDrinks";
 import './DrinkPage.css'
 
 const DrinkPage = () => {
@@ -82,6 +83,7 @@ const DrinkPage = () => {
 
 
     const [showModal, setShowModal] = useState(false);
+    const [showReviewModal, setReviewModal] = useState(false);
     let newArray = reviewsList.slice(0).reverse()
 
     const handleDelete = async (e)=> {
@@ -294,12 +296,12 @@ const DrinkPage = () => {
                     )}
                     {(sessionUser && sessionUser.id === usernameId) &&
                         <>
-                        {/* <button className="review-button" onClick={() => setShowModal(true)}>Edit</button>
-                        {(showModal) && (
-                            <Modal onClose={() => setShowModal(false)}>
+                        <button className="review-button" onClick={() => setReviewModal(true)}>Edit</button>
+                        {(showReviewModal) && (
+                            <Modal onClose={() => setReviewModal(false)}>
                                 <UpdateDrinksForm />
                             </Modal>
-                        )} */}
+                        )}
                         <button className="review-button" onClick={handleDelete}>Delete</button>
                         </>
                     }

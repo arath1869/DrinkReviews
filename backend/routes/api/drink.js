@@ -20,13 +20,13 @@ router.post(
     })
 )
 
-// router.put(
-//     "/:id",
-//     asyncHandler(async function (req, res) {
-//         const drink = await DrinksRepository.updateDrink(req.body)
-//         return res.json({drink})
-//     })
-// )
+router.put(
+    "/:id",
+    asyncHandler(async function (req, res) {
+        const drink = await DrinksRepository.updateDrink(req.body)
+        return res.json({drink})
+    })
+)
 
 
 router.delete('/:id', asyncHandler(async function(req,res){

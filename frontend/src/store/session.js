@@ -44,7 +44,6 @@ export const demo = (user) => async (dispatch) => {
     return response;
 };
 
-const initialState = { user: null };
 
 export const restoreUser = () => async dispatch => {
     const response = await csrfFetch('/api/session');
@@ -76,6 +75,7 @@ export const logout = () => async (dispatch) => {
     return response;
 };
 
+const initialState = { user: null };
 const sessionReducer = (state = initialState, action) => {
     let newState;
     switch (action.type) {

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { editDrink } from '../../store/drinks';
 import { useHistory,useParams } from 'react-router-dom';
+import { editDrink } from '../../store/drinks';
 
 
 
@@ -25,7 +25,6 @@ const UpdateDrinksForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         const payload = {
             ...currentDrink,
             title,
@@ -36,7 +35,7 @@ const UpdateDrinksForm = () => {
         let editedDrink = await dispatch(editDrink(payload, drinkId))
         console.log(editedDrink)
         if (editedDrink) {
-            history.push(`/drinks/`);
+            await history.push(`/drinks`);
         }
     };
 

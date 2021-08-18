@@ -7,6 +7,7 @@ import Home from './components/Home/index'
 import DrinkPage from './components/DrinkPage'
 import AllDrinks from './components/allDrinks/index'
 import ReviewPage from './components/ReviewPage/index'
+import UpdateDrinksForm from "./components/UpdateDrinks";
 
 function App() {
 

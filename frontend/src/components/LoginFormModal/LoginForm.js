@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import './LoginForm.css'
 import { Link } from "react-router-dom";
 import { Modal } from '../../context/Modal';
+import { Redirect } from 'react-router-dom'
 import SignupFormPage from '../SignupFormPage/SignupForm'
 
 function LoginForm() {
     const dispatch = useDispatch();
+    const sessionUser = useSelector(state => state.session.user)
     const [showModal, setShowModal] = useState(false);
     const [credential, setCredential] = useState("");
     const [password, setPassword] = useState("");
@@ -16,8 +18,8 @@ function LoginForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrors([]);
-        return dispatch(sessionActions.login({ credential, password })).catch(
-            async (res) => {
+        return dispatch(sessionActions.login({ credential, password }))
+        .catch(async (res) => {
                 const data = await res.json();
                 if (data && data.errors) setErrors(data.errors);
             }
