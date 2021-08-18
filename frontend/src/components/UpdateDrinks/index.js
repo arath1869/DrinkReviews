@@ -4,8 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory,useParams } from 'react-router-dom';
 import { editDrink } from '../../store/drinks';
 
-
-
 const UpdateDrinksForm = () => {
     const dispatch = useDispatch();
     let { drinkId } = useParams()
@@ -14,14 +12,12 @@ const UpdateDrinksForm = () => {
     let currentDrink=allDrinks[drinkId]
     const history = useHistory();
 
-
     const [imageURL, setImageURL] = useState(currentDrink?.imageURL);
     const [title, setTitle] = useState(currentDrink?.title);
     let [userId, setUserId] = useState(currentDrink?.userId)
 
     const updateImageURL = (e) => setImageURL(e.target.value)
     const updateTitle = (e) => setTitle(e.target.value)
-
 
     const handleSubmit = async (e) => {
         e.preventDefault();

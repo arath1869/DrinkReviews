@@ -211,7 +211,7 @@ const DrinkPage = () => {
                         </div>
                         <div className="progress-container">
                             5⭐️ 
-                        <div class="progress"
+                        <div className="progress"
                         style={{
                             width: "calc(80px + 3vw)",
                             height: "12px",
@@ -222,7 +222,7 @@ const DrinkPage = () => {
                         </div>
                         <div className="progress-container">
                             4⭐️
-                        <div class="progress"
+                        <div className="progress"
                                 style={{
                                     width: "calc(80px + 3vw)",
                                     height: "12px",
@@ -233,7 +233,7 @@ const DrinkPage = () => {
                         </div>
                         <div className="progress-container">
                             3⭐️
-                        <div class="progress"
+                        <div className="progress"
                                 style={{
                                     width: "calc(80px + 3vw)",
                                     height: "12px",
@@ -244,7 +244,7 @@ const DrinkPage = () => {
                         </div>
                         <div className="progress-container">
                             2⭐️
-                        <div class="progress"
+                        <div className="progress"
                                 style={{
                                     width: "calc(80px + 3vw)",
                                     height: "12px",
@@ -255,7 +255,7 @@ const DrinkPage = () => {
                         </div>
                         <div className="progress-container">
                             1⭐️
-                        <div class="progress"
+                        <div className="progress"
                         
                                 style={{
                                     width: "calc(80px + 3vw)",

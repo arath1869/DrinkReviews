@@ -7,7 +7,7 @@ import Home from './components/Home/index'
 import DrinkPage from './components/DrinkPage'
 import AllDrinks from './components/allDrinks/index'
 import ReviewPage from './components/ReviewPage/index'
-import UpdateDrinksForm from "./components/UpdateDrinks";
+import RandomReview from "./components/RandomReview";
 
 function App() {
 
@@ -34,6 +34,9 @@ function App() {
           </Route>
           <Route exact path="/reviews/:revId">
             <ReviewPage />
+          </Route>
+          <Route exact path="/random">
+            <RandomReview />
           </Route>
         </Switch>
       )}

@@ -17,22 +17,17 @@ const AllDrinks = () => {
     useEffect(() => {
         dispatch(getDrinks())
     },[dispatch])
-
+    
     useEffect(() => {
         dispatch(getUsers())
     }, [dispatch])
-
+    
     useEffect(() => {
         dispatch(getReviews())
     }, [dispatch])
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            console.log('This will run every 5 seconds!');
-        }, 5000);
-        return () => clearInterval(interval);
-    }, []);
 
+            
     const [showModal, setShowModal] = useState(false);
     const sessionUser = useSelector(state => state.session.user)
     const allDrinks = useSelector(state => state.drinks)
@@ -41,9 +36,9 @@ const AllDrinks = () => {
     const allReviewsArray = useSelector(state => state.reviews.list)
     let newArray = allDrinksArray.slice(0).reverse()
     const allUsers = useSelector(state=>state.user)
-    allReviewsArray.forEach((element) => {
-        console.log(element)
-    })
+            
+
+    
 
 return (
     <div>
