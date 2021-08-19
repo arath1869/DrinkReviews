@@ -7,14 +7,6 @@ router.use('/api', apiRouter);
 // Static routes
 // Serve React build files in production
 
-if (process.env.NODE_ENV === 'production') {
-    app.use((req, res, next) => {
-        if (req.header('x-forwarded-proto') !== 'https')
-            res.redirect(`https://${req.header('host')}${req.url}`)
-        else
-            next()
-    })
-}
 
 if (process.env.NODE_ENV === 'production') {
     const path = require('path');
