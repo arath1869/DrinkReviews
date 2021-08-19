@@ -24,7 +24,7 @@ router.put(
     "/:id",
     asyncHandler(async function (req, res) {
         const drink = await DrinksRepository.updateDrink(req.body)
-        return res.json({drink})
+        return res.json(drink)
     })
 )
 
