@@ -1,6 +1,8 @@
+
 const express = require('express');
 const asyncHandler = require('express-async-handler');
 const { setTokenCookie, restoreUser } = require('../../utils/auth');
+const { singlePublicFileUpload, singleMulterUpload } = require('../../awsS3')
 
 
 const DrinksRepository = require('../../db/drinks-repository')
@@ -13,9 +15,11 @@ router.get('/', asyncHandler(async function(_req, res) {
 
 router.post(
     '/',
+    singleMulterUpload("imageURL"),
     asyncHandler(async function (req,res) {
-        const {title,imageURL,userId} = req.body;
-        const id = await DrinksRepository.create({title,imageURL,userId});
+        const {title,userId} = req.body;
+        const imageURL = await singlePublicFileUpload(req.file);
+        const id = await DrinksRepository.create({title,userId,imageURL});
         return res.json(id)
     })
 )

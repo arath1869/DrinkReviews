@@ -25,11 +25,18 @@ const deleteOne = (drinkId) => ({
 })
 
 export const createDrink = (data) => async dispatch => {
+    const { title, imageURL, userId } = data;
+    const formData = new FormData();
+    formData.append("title", title)
+    formData.append("userId", userId)
+
+    if(imageURL) formData.append("imageURL", imageURL);
+
     const response = await csrfFetch(`/api/drinks`,
     {
         method: 'POST',
-        headers:{'Content-Type': 'application/json'},
-        body: JSON.stringify(data)
+        headers: { 'Content-Type': 'multipart/form-data'},
+        body: formData
     })
     if(response.ok){
         const drink = await response.json()

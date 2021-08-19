@@ -1,9 +1,18 @@
 import './Home.css'
 import React from "react"
+import { useEffect, useState } from 'react';
 import RecentDrinks from '../RecentDrinks'
 
 
+
 const Home = () => {
+
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
+    
     return (
         <div>
         <div className='home-div'>

@@ -15,6 +15,11 @@ import './DrinkPage.css'
 const DrinkPage = () => {
     const history=useHistory()
     const dispatch = useDispatch()
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     useEffect(() => {
         dispatch(getDrinks())
     }, [dispatch])

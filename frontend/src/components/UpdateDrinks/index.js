@@ -15,6 +15,7 @@ const UpdateDrinksForm = () => {
     const [imageURL, setImageURL] = useState(currentDrink?.imageURL);
     const [title, setTitle] = useState(currentDrink?.title);
     let [userId, setUserId] = useState(currentDrink?.userId)
+    
 
     const updateImageURL = (e) => setImageURL(e.target.value)
     const updateTitle = (e) => setTitle(e.target.value)
@@ -34,6 +35,8 @@ const UpdateDrinksForm = () => {
             await history.push(`/drinks`);
         }
     };
+
+   
 
     if (sessionUser) {
         userId = sessionUser.id
