@@ -6,12 +6,14 @@ const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
 const routes = require('./routes');
 const { ValidationError } = require('sequelize');
+import sslRedirect from 'heroku-ssl-redirect';
 
 
 const { environment } = require('./config');
 const isProduction = environment === 'production';
 
 const app = express();
+app.use(sslRedirect());
 app.use(morgan('dev'));
 
 app.use(cookieParser());
