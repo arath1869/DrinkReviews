@@ -86,6 +86,7 @@ const Home = () => {
         <div className="outter">
             <div className="searchBar">
             <input
+            autocomplete="off"
             id="myInput"
             onChange={handleInput}
             onKeyDown={_handleKeyDown}
