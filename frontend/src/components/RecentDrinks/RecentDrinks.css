@@ -1,7 +1,7 @@
 .mostRecentPhoto-1 img{
     max-width:200px;
     max-height: 200px;
-    position: sticky;
+    position: static;
     height: 20vw;
     width: 10vw;
     margin: 0 10%;
@@ -11,7 +11,7 @@
 .mostRecentPhoto-2 img{
     max-width:200px;
     max-height: 200px;
-    position: sticky;
+    position: static;
     height: 20vw;
     width: 10vw;
     margin: 0 10%;
@@ -21,7 +21,7 @@
 .mostRecentPhoto-3 img{
     max-width:200px;
     max-height: 200px;
-    position: sticky;
+    position: static;
     height: 20vw;
     width: 10vw;
     margin: 0 10%;
@@ -31,7 +31,7 @@
 .mostRecentPhoto-4 img{
     max-width:200px;
     max-height: 200px;
-    position: sticky;
+    position: static;
     height: 20vw;
     width: 10vw;
     margin: 0 10%;

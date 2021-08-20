@@ -42,6 +42,13 @@ app.use(
     })
     );
     
+if (isProduction) {
+    app.enable('trust proxy');
+    app.use((req, res, next) => {
+        req.secure ? next() : res.redirect(`https://${req.headers.host + req.url}`);
+    });
+}
+
 app.use(routes)
 
 // Catch unhandled requests and forward to error handler.

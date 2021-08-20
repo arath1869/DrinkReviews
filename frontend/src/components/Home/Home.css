@@ -52,16 +52,34 @@ body {
     display: inline-block;
     position: absolute;
     font-family:'Roboto',sans-serif;
-    margin-top: 20%;
-    margin-bottom: 80%;
-    margin-left: 30%;
-    margin-right: 70%;
+    margin-top: 18vw;
+   margin-left: 30vw;
     height: 3vh;
-    width: 40%;
+    width: 35vw;
 }
 
 /* .outterWrapper{
     position: sticky;
 } */
+
+.auto-dropdown {
+  position: absolute;
+  display: inline-block;
+  font-family:'Roboto',sans-serif;
+  background-color: white;
+  margin-top: 20.2vw;
+  margin-left: 30vw;
+  height: 9vw;
+  width: 35vw;
+  max-width:350px;
+  max-height:150px;
+  border: 1px solid black;
+  overflow: scroll;
+}
+
+ul.auto-dropdown {
+    list-style-type: none;
+}
+
 
 
