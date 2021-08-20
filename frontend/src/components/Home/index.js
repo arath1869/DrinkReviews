@@ -1,6 +1,7 @@
 import './Home.css'
 import React from "react"
 import { useDispatch, useSelector } from 'react-redux';
+import { Link, useHistory } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getDrinks } from '../../store/drinks';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
@@ -11,6 +12,7 @@ import RecentDrinks from '../RecentDrinks'
 const Home = () => {
 
     const dispatch = useDispatch()
+    const history = useHistory();
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -23,9 +25,11 @@ const Home = () => {
     const allDrinks = useSelector(state => state.drinks)
     const allDrinksArray = useSelector(state => state.drinks.list)
     const names = []
+    const idArray = [];
 
     allDrinksArray.forEach((element) => {
         names.push(allDrinks[element]?.title)
+        idArray.push(allDrinks[element]?.id)
     })
 
     const [name, setName] = useState(``)
@@ -43,10 +47,17 @@ const Home = () => {
             }
         });
 
-        if (matches.length === 0) matches.push('No matches');
+        // if (matches.length === 0) matches.push('No matches');
         return matches;
     }
 
+    let _handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+    if(results.length !==0){
+      history.push(`/drinks/${allDrinks[idArray[names.indexOf(results[0].key)]]?.id}`)
+    }
+    }
+  }
 
     let handleInput = (e) => {
         setInputVal(e.target.value);
@@ -63,7 +74,7 @@ const Home = () => {
             classNames="result"
             timeout={{ enter: 500, exit: 300 }}
         >
-            <li>{result}</li>
+        <li className="listSearch"><Link className="searchList" to={`/drinks/${allDrinks[idArray[names.indexOf(result)]]?.id}`}>{result}</Link></li>
         </CSSTransition>
     ));
 
@@ -72,22 +83,37 @@ const Home = () => {
     return (
         <div>
         <div className='home-div'>
+        <div className="outter">
             <div className="searchBar">
             <input
+            id="myInput"
             onChange={handleInput}
+            onKeyDown={_handleKeyDown}
             value={inputVal}
             placeholder="Search..."
             className="input-search-field"
             type="text"
             />
-            { inputVal.length > 2 &&
+            </div>
+            <div>
+            { inputVal.length > 2 && results.length !== 0 &&
             <ul className="auto-dropdown" onClick={selectName}>
                         <TransitionGroup>
                             {results}
                         </TransitionGroup>
                     </ul>
 }
+{ inputVal.length > 2 && results.length === 0 &&
+            <ul className="auto-dropdown" onClick={selectName}>
+                        <TransitionGroup>
+                            No Results
+                        </TransitionGroup>
+                    </ul>
+}
+            
             </div>
+            </div>
+
                 <img className="home-background" src= "https://i.ibb.co/r293YX9/usable-home.png" alt="fontpage"/>
             <div>
                 <RecentDrinks />
