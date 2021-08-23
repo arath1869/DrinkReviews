@@ -18,6 +18,8 @@ const AllDrinks = () => {
         window.scrollTo(0, 0)
     }, [])
 
+   
+
     useEffect(() => {
         dispatch(getDrinks())
     },[dispatch])
@@ -31,7 +33,7 @@ const AllDrinks = () => {
     }, [dispatch])
 
 
-            
+    const [randomReview, setRandomReview] = useState(0)
     const [showModal, setShowModal] = useState(false);
     const sessionUser = useSelector(state => state.session.user)
     const allDrinks = useSelector(state => state.drinks)
@@ -40,8 +42,13 @@ const AllDrinks = () => {
     const allReviewsArray = useSelector(state => state.reviews.list)
     let newArray = allDrinksArray.slice(0).reverse()
     const allUsers = useSelector(state=>state.user)
-            
+    let drinkReviewArray = []
 
+    //  useEffect(() => {
+    //     const interval_id = setInterval(() => {
+    //         console.log('hello')
+    //     }, 1000)
+    // }, [])
     
 
 return (
@@ -77,7 +84,14 @@ return (
                     <Link className="linkToDrink" to={`/drinks/${element}`}>
                     <div className="drinks-title">{`${allDrinks[element]?.title}`}</div>
                     </Link>
-                    <div className="testDiv">⭐⭐⭐⭐⭐</div>
+                    {/* {
+                    allReviewsArray.forEach((reviewelement) => {
+                    
+                        if(allReviews[reviewelement]?.drinksId === element){
+                            
+                        }
+                    })}
+                    <div className="testDiv">{allReviews[drinkReviewArray[0]]?.comment}</div> */}
                 </div>
             
             </div>
