@@ -1,7 +1,7 @@
 # Welcome to DrinkReviews!
 
 DrinkReviews is a web application that allows users to post drinks and rate them. This project is loosely inspired by [Yelp](https://yelp.com/), a website where individuals can rate local businesses.
-#### Live link: [Instafake](https://drinkreviews.herokuapp.com/)
+#### Live link: [DrinkReviews](https://drinkreviews.herokuapp.com/)
 ***
 
 ### Index
