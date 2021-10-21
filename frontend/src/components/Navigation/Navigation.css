@@ -84,6 +84,30 @@
     cursor: pointer;
 }
 
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3){
+      .drinks-navLink{
+          height: 25px;
+          width: 50px;
+          margin-top: 2px;
+          font-size: 10px;
+      }
+  }
+
+  @media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3){
+      .home-navLink{
+          height: 25px;
+          width: 50px;
+          margin-top: 2px;
+          font-size: 10px;
+      }
+  }
+
 .drinks-navLink:hover{
     transform: translateY(-6px);
 }
@@ -119,6 +143,19 @@
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
 }
 
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3){
+      .home-navLink-drinks{
+        height: 25px;
+          width: 50px;
+          margin-top: 2px;
+          font-size: 10px;
+      }
+  }
+
+
 .home-navLink-drinks:hover{
     color:black;
     background-color: transparent;
@@ -128,20 +165,3 @@
 .home-navLink-drinks:active{
     transform: translateY(2px);
 }
-@media only screen 
-  and (min-device-width: 300px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3){
-      .home-navLink{
-          height: 25px;
-          width: 50px;
-          margin-top: 2px;
-          font-size: 10px;
-      }
-       .home-navLink-drinks{
-          height: 25px;
-          width: 50px;
-          margin-top: 2px;
-          font-size: 10px;
-      }
-  }
