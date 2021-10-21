@@ -30,18 +30,22 @@ function ProfileButton({ user }) {
 
     return (
         <>
+        <div className="mobile-container">
             <button onClick={openMenu}>
                 <i className="fas fa-user"></i>
             </button>
-            {showMenu && (
-                <ul className="profile-dropdown">
-                    <li>{user.username}</li>
-                    <li>{user.email}</li>
-                    <li>
-                        <button onClick={logout}>Log Out</button>
-                    </li>
-                </ul>
-            )}
+                <div className="contents-mobile">
+                    {showMenu && (
+                        <ul className="profile-dropdown">
+                            <li>{user.username}</li>
+                            <li>{user.email}</li>
+                            <li>
+                                <button onClick={logout}>Log Out</button>
+                            </li>
+                        </ul>
+                    )}
+                </div>
+            </div>
         </>
     );
 }

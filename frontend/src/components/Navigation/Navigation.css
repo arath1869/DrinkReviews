@@ -143,6 +143,11 @@
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
 }
 
+.mobile-container{
+          border: 1px solid black;
+          margin-left: -100px;
+      }
+
 @media only screen 
   and (min-device-width: 300px) 
   and (max-device-width: 812px) 
@@ -152,6 +157,15 @@
           width: 50px;
           margin-top: 2px;
           font-size: 10px;
+      }
+      .mobile-container{
+          border: 1px solid transparent;
+          margin-left: -70px;
+      }
+      .contents-mobile{
+          border: 1px solid transparent;
+          margin-left: -50px;
+
       }
   }
 
