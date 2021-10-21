@@ -36,6 +36,7 @@
     /* box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2); */
 }
 
+
 .home-navLink:hover{
     color:#000000;
     background-color:#FFFFFF;
@@ -43,7 +44,7 @@
 }
 
 .home-navLink:active{
-     transform: translateY(2px);
+    transform: translateY(2px);
 }
 
 .navDiv{
@@ -59,17 +60,17 @@
 
 
 .drinks-navLink{
-   position: absolute;
-   margin-top: -2vh;
-   margin-bottom: auto;
-   margin-left: -3vw;
-   margin-right: auto;
-   background-color: transparent;
-   display: inline-block;
-   border-top: none;
-   border-bottom: .3em solid black;
-   border-left: none ;
-   border-right: none;
+    position: absolute;
+    margin-top: -2vh;
+    margin-bottom: auto;
+    margin-left: -3vw;
+    margin-right: auto;
+    background-color: transparent;
+    display: inline-block;
+    border-top: none;
+    border-bottom: .3em solid black;
+    border-left: none ;
+    border-right: none;
     font-size: 1.2vw;
     color:black;
     border-radius:0;
@@ -88,21 +89,21 @@
 }
 
 .drinks-navLink:active{
-     transform: translateY(2px);
+    transform: translateY(2px);
 }
 
 .home-navLink-drinks{
-   position: absolute;
-   margin-top: -2vh;
-   margin-bottom: auto;
-   margin-left: -3vw;
-   margin-right: auto;
-   background-color: transparent;
-   display: inline-block;
-   border-top: none;
-   border-bottom: .2em solid black;
-   border-left: none ;
-   border-right: none;
+    position: absolute;
+    margin-top: -2vh;
+    margin-bottom: auto;
+    margin-left: -3vw;
+    margin-right: auto;
+    background-color: transparent;
+    display: inline-block;
+    border-top: none;
+    border-bottom: .2em solid black;
+    border-left: none ;
+    border-right: none;
     font-size: 1.2vw;
     color:black;
     border-radius:0;
@@ -125,5 +126,22 @@
 }
 
 .home-navLink-drinks:active{
-     transform: translateY(2px);
+    transform: translateY(2px);
 }
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3){
+      .home-navLink{
+          height: 25px;
+          width: 50px;
+          margin-top: 2px;
+          font-size: 10px;
+      }
+       .home-navLink-drinks{
+          height: 25px;
+          width: 50px;
+          margin-top: 2px;
+          font-size: 10px;
+      }
+  }

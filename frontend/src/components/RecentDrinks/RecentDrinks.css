@@ -190,3 +190,15 @@
     text-transform: capitalize;
 }
 
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3){
+      .title_mostRecent{
+          font-size:25px;
+          text-align: center;
+          height: 80px;
+          margin-top: -20px;
+      }
+  }
+

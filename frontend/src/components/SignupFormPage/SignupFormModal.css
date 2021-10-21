@@ -21,6 +21,26 @@
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3){
+      .signup-button{
+          margin-left: -50px;
+          height: 25px;
+          width: 50px;
+          margin-top: 70px;
+          font-size: 10px;
+      }
+      .signup-button-light{
+          margin-left: -50px;
+          height: 25px;
+          width: 50px;
+          margin-top: 70px;
+          font-size: 10px;
+      }
+  }
+
 .signup-button:hover{
     color:#000000;
     background-color:#FFFFFF;
