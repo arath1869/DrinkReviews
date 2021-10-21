@@ -181,6 +181,10 @@ font-weight: bold;
           border: 1px solid transparent;
           box-shadow: none;
       }
+      .stars-holder{
+          margin-left: -10px;
+          margin-right: 5px;
+      }
   }
 
 
