@@ -200,5 +200,43 @@
           height: 80px;
           margin-top: -20px;
       }
+      .mostRecentPhoto-1{
+          height: 150px;
+          width: 92px;
+          margin-left: -35px;
+          margin-top: -10px;
+      }
+      .mostRecentPhoto-2{
+          height: 150px;
+          width: 92px;
+          margin-left: -18px;
+          margin-top: -10px;
+      }
+      .mostRecentPhoto-3{
+          height: 150px;
+          width: 92px;
+          margin-left: 1px;
+          margin-top: -10px;
+      }
+      .mostRecentPhoto-4{
+          height: 150px;
+          width: 92px;
+          margin-left: 17px;
+          margin-top: -10px;
+      }
+
+    .mostRecentPhoto-1-name{
+        font-size: 9px;
+    }
+    .mostRecentPhoto-2-name{
+        font-size: 9px;
+    }
+    .mostRecentPhoto-3-name{
+        font-size: 9px;
+    }
+    .mostRecentPhoto-4-name{
+        font-size: 9px;
+    }
+     
   }
 
