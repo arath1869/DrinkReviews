@@ -40,11 +40,11 @@
 .home-navLink:hover{
     color:#000000;
     background-color:#FFFFFF;
-    transform: translateY(-6px);
+    transform: none;
 }
 
 .home-navLink:active{
-    transform: translateY(2px);
+    transform: none;
 }
 
 .navDiv{
@@ -109,11 +109,11 @@
   }
 
 .drinks-navLink:hover{
-    transform: translateY(-6px);
+    transform: none;
 }
 
 .drinks-navLink:active{
-    transform: translateY(2px);
+    transform: none;
 }
 
 .home-navLink-drinks{
@@ -173,9 +173,9 @@
 .home-navLink-drinks:hover{
     color:black;
     background-color: transparent;
-    transform: translateY(-6px);
+    transform: none;
 }
 
 .home-navLink-drinks:active{
-    transform: translateY(2px);
+    transform: none;
 }

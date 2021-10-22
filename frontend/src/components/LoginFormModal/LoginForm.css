@@ -49,7 +49,7 @@ input:focus{
 }
 
 .modal-login-button:hover{
-    transform: translateY(-6px);
+    transform: none;
     color:white;
 }
 

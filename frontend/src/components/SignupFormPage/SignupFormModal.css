@@ -45,11 +45,11 @@
 .signup-button:hover{
     color:#000000;
     background-color:#FFFFFF;
-    transform: translateY(-6px);
+    transform: none;
 }
 
 .signup-button:active{
-     transform: translateY(2px);
+     transform: none;
 }
 
 .signup-button-light{
@@ -97,10 +97,10 @@
   }
 
 .signup-button-light:hover{
-    transform: translateY(-6px);
+    transform: none;
 }
 
 .signup-button-light:active{
-     transform: translateY(2px);
+     transform: none;
 }
 
