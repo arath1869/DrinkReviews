@@ -14,7 +14,7 @@
     margin-right: auto;
     font-weight:300;
     text-align:center;
-    transition: all 0.2s;
+
     width:6vw;
     height: 5vh;
     cursor: pointer;
@@ -47,7 +47,7 @@
     margin-right: auto;
     font-weight:300;
     text-align:center;
-    transition: all 0.2s;
+  
     width:6vw;
     height: 5vh;
     cursor: pointer;
