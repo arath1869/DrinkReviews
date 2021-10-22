@@ -42,6 +42,14 @@
           font-size: 9px;
       }
 
+      .login-button:hover{
+          transform: none;
+      }
+
+      .login-button:active{
+          transform: none;
+      }
+
       .login-button-light{
           margin-left: -50px;
           height: 25px;
@@ -49,6 +57,21 @@
           margin-top:30px;
           font-size: 9px;
       }
+      .login-button-light:hover{
+          transform: none;
+      }
+
+      .login-button-light:active{
+          transform: none;
+      }
+
+      .demo-button:hover{
+          transform: none;
+      }
+
+      .demo-button:active{
+     transform: none;
+}
   }
 
 
@@ -106,4 +129,12 @@
           margin-top:0px;
           font-size: 9px;
       }
+
+      .demo-button-light:hover{
+          transform: none;
+      }
+
+      .demo-button-light:active{
+        transform: none;
+}
   }
