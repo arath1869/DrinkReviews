@@ -12,6 +12,9 @@
     "sequelize-cli": "npm run --prefix backend sequelize-cli",
     "start": "npm start --prefix backend"
   },
+  "engines": {
+  "node": "18.1.0"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arath1869/react-solo-project.git"
