@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "heroku-postbuild": "npm run build --prefix frontend export NODE_OPTIONS=--openssl-legacy-provider && npm run build",
+    "heroku-postbuild": " npm audit fix --force npm run build --prefix frontend export NODE_OPTIONS=--openssl-legacy-provider && npm run build",
     "install": "npm --prefix backend install backend && npm --prefix frontend install frontend",
     "dev:backend": "npm install --prefix backend start",
     "dev:frontend": "npm install --prefix frontend start",
@@ -13,7 +13,7 @@
     "start": "npm start --prefix backend"
   },
   "engines": {
-  "node": "18.x"
+  "node": "18.1.0"
 },
   "repository": {
     "type": "git",
